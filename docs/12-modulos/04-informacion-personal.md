@@ -1,4 +1,4 @@
-# Módulo Información Personal — estudio inicial
+# Módulo 4 — Información Personal — estudio inicial
 
 ## Estado
 
