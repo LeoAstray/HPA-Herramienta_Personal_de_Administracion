@@ -13,7 +13,7 @@ Cada estudio debe responder: propósito, problema, capacidades, límites, entida
 | Orden | Módulo | Estado Fase 1 |
 | ---: | --- | --- |
 | 1 | [Core](00-core.md) | Iniciado |
-| 2 | Identidad y Seguridad | Pendiente |
+| 2 | [Identidad y Seguridad](01-identidad-seguridad.md) | Iniciado |
 | 3 | Configuración | Pendiente |
 | 4 | Notificaciones | Pendiente |
 | 5 | Información Personal | Pendiente |
