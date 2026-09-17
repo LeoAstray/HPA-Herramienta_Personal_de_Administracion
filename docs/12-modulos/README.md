@@ -24,7 +24,7 @@ Cada estudio debe responder: propósito, problema, capacidades, límites, entida
 | 9 | [Finanzas / Planificación Salarial](09-finanzas.md) | Iniciado |
 | 10 | [Guías y Procedimientos](10-guias-y-procedimientos.md) | Iniciado |
 | 11 | [Búsqueda](11-busqueda.md) | Iniciado |
-| 12 | Automatizaciones | Pendiente |
+| 12 | [Automatizaciones](12-automatizaciones.md) | Iniciado |
 | 13 | Integraciones | Pendiente |
 | 14 | IA / Agentes | Pendiente |
 | 15 | Backup y Recuperación | Pendiente |
