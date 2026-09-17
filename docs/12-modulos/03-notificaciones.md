@@ -1,4 +1,4 @@
-# Módulo Notificaciones — estudio inicial
+# Módulo 3 — Notificaciones — estudio inicial
 
 ## Estado
 

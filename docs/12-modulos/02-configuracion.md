@@ -1,4 +1,4 @@
-# Módulo Configuración — estudio inicial
+# Módulo 2 — Configuración — estudio inicial
 
 ## Estado
 

@@ -4,7 +4,7 @@
 
 - Línea base funcional y de alcance inicial disponible.
 - ADR-001 y ADR-002 aprobadas.
-- Estudio global de módulos iniciado.
+- Estudio global de módulos iniciado; los módulos 0 a 5 cuentan con documentación de análisis.
 
 ## Próximo
 
