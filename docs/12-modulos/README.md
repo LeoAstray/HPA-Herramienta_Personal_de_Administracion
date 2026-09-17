@@ -27,7 +27,7 @@ Cada estudio debe responder: propósito, problema, capacidades, límites, entida
 | 12 | [Automatizaciones](12-automatizaciones.md) | Iniciado |
 | 13 | [Integraciones](13-integraciones.md) | Iniciado |
 | 14 | [IA / Agentes](14-ia-agentes.md) | Iniciado |
-| 15 | Backup y Recuperación | Pendiente |
+| 15 | [Backup y Recuperación](15-backup-y-recuperacion.md) | Iniciado |
 
 Core se numera como módulo 0 para mantener la correspondencia entre el prefijo de cada archivo y el número de módulo. Es una base transversal: no es un módulo funcional de usuario ni altera la secuencia funcional 1–15.
 
