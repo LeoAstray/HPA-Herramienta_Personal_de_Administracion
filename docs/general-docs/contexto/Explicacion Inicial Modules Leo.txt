@@ -1,19 +1,19 @@
-1. Core
-2. Identidad y Seguridad
-3. Configuración
-4. Notificaciones
-5. Información Personal
-6. Documentos y Archivos
-7. Tareas
-8. Calendario y Eventos
-9. Estudios
-10. Finanzas / Planificación Salarial
-11. Guías y Procedimientos
-12. Búsqueda
-13. Automatizaciones
-14. Integraciones
-15. IA / Agentes
-16. Backup y Recuperación
+0. Core (base transversal)
+1. Identidad y Seguridad
+2. Configuración
+3. Notificaciones
+4. Información Personal
+5. Documentos y Archivos
+6. Tareas
+7. Calendario y Eventos
+8. Estudios
+9. Finanzas / Planificación Salarial
+10. Guías y Procedimientos
+11. Búsqueda
+12. Automatizaciones
+13. Integraciones
+14. IA / Agentes
+15. Backup y Recuperación
 
 
 Para cada uno determinaríamos:

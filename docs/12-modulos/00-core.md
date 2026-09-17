@@ -1,4 +1,4 @@
-# Módulo Core — estudio inicial
+# Módulo 0 — Core — estudio inicial
 
 ## Estado
 
