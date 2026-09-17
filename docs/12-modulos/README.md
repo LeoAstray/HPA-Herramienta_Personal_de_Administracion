@@ -16,7 +16,7 @@ Cada estudio debe responder: propósito, problema, capacidades, límites, entida
 | 2 | [Identidad y Seguridad](01-identidad-seguridad.md) | Iniciado |
 | 3 | [Configuración](02-configuracion.md) | Iniciado |
 | 4 | [Notificaciones](03-notificaciones.md) | Iniciado |
-| 5 | Información Personal | Pendiente |
+| 5 | [Información Personal](04-informacion-personal.md) | Iniciado |
 | 6 | Documentos y Archivos | Pendiente |
 | 7 | Tareas | Pendiente |
 | 8 | Calendario y Eventos | Pendiente |
