@@ -21,7 +21,7 @@ Cada estudio debe responder: propósito, problema, capacidades, límites, entida
 | 6 | [Tareas](06-tareas.md) | Iniciado |
 | 7 | [Calendario y Eventos](07-calendario-y-eventos.md) | Iniciado |
 | 8 | [Estudios](08-estudios.md) | Iniciado |
-| 9 | Finanzas / Planificación Salarial | Pendiente |
+| 9 | [Finanzas / Planificación Salarial](09-finanzas.md) | Iniciado |
 | 10 | Guías y Procedimientos | Pendiente |
 | 11 | Búsqueda | Pendiente |
 | 12 | Automatizaciones | Pendiente |
