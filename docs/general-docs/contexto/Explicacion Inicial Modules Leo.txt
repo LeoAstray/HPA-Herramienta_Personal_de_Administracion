@@ -1,0 +1,32 @@
+1. Core
+2. Identidad y Seguridad
+3. Configuración
+4. Notificaciones
+5. Información Personal
+6. Documentos y Archivos
+7. Tareas
+8. Calendario y Eventos
+9. Estudios
+10. Finanzas / Planificación Salarial
+11. Guías y Procedimientos
+12. Búsqueda
+13. Automatizaciones
+14. Integraciones
+15. IA / Agentes
+16. Backup y Recuperación
+
+
+Para cada uno determinaríamos:
+- propósito;
+- qué problema resuelve;
+- qué debe permitir;
+- qué NO debe hacer;
+- entidades principales;
+- relaciones;
+- dependencias;
+- seguridad;
+- automatizaciones;
+- interacción con otros módulos;
+- qué entra en MVP;
+- qué queda para futuro;
+- dudas y decisiones pendientes.

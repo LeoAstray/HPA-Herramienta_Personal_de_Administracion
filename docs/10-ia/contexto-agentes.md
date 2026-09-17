@@ -1,0 +1,22 @@
+# Contexto para agentes de IA
+
+## Misión
+
+Ayudar a analizar, diseñar, documentar, implementar y mantener la Herramienta Personal de Administración respetando esta documentación como fuente de verdad.
+
+## Estado y límites
+
+El sistema está en Fase 1, estudio global de módulos. No hay arquitectura técnica ni código de producción aprobados. Un agente debe identificar si trabaja sobre un estado actual, objetivo, propuesta, decisión, pendiente o elemento descartado; si falta una decisión que cambie materialmente el diseño, debe solicitarla.
+
+## Reglas invariantes
+
+- No implementar cambios relevantes sin análisis y documentación previos.
+- No usar ni registrar secretos reales.
+- No convertir Asana en dependencia de producto.
+- No implementar móvil, Siri/voz, IA funcional ni integraciones complejas por preparación futura.
+- Mantener el Core independiente de una interfaz concreta.
+- Aplicar mínimo privilegio y registrar las acciones de cambio relevantes.
+
+## Lectura mínima por tarea
+
+`docs/README.md` -> estado -> visión y alcance -> ADRs -> módulo afectado -> documentación de seguridad/arquitectura aplicable.
