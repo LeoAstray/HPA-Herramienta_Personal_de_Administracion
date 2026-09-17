@@ -41,4 +41,4 @@ Esta carpeta describe el producto, sus decisiones y su evolución para que una p
 
 | `documentacion/` | Publicaciones DOCX/PDF y sus notas de contexto, separadas de la documentación Markdown operativa. |
 
-Los Markdown históricos de `SPEC-INICIAL/`, `ADR-001/` y `ADR-002/` se conservan como material fuente. Sus DOCX/PDF están centralizados en `documentacion/fuentes/`. Ninguno de esos directorios es el lugar para crear documentación nueva.
+Los Markdown históricos de `SPEC-INICIAL/`, `ADR-001/` y `ADR-002/` se conservan como material fuente. Sus DOCX/PDF están centralizados en `general-docs/fuentes/`. Ninguno de esos directorios es el lugar para crear documentación nueva.
