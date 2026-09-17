@@ -17,8 +17,8 @@ Cada estudio debe responder: propósito, problema, capacidades, límites, entida
 | 2 | [Configuración](02-configuracion.md) | Iniciado |
 | 3 | [Notificaciones](03-notificaciones.md) | Iniciado |
 | 4 | [Información Personal](04-informacion-personal.md) | Iniciado |
-| 5 | [Documentos y Archivos](05-documentos-y-archivos.md) | En análisis |
-| 6 | Tareas | Pendiente |
+| 5 | [Documentos y Archivos](05-documentos-y-archivos.md) | Iniciado |
+| 6 | [Tareas](06-tareas.md) | Iniciado |
 | 7 | Calendario y Eventos | Pendiente |
 | 8 | Estudios | Pendiente |
 | 9 | Finanzas / Planificación Salarial | Pendiente |
