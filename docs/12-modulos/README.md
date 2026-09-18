@@ -19,15 +19,15 @@ Cada estudio debe responder: propósito, problema, capacidades, límites, entida
 | 4 | [Información Personal](04-informacion-personal.md) | Iniciado |
 | 5 | [Documentos y Archivos](05-documentos-y-archivos.md) | Iniciado |
 | 6 | [Tareas](06-tareas.md) | Iniciado |
-| 7 | Calendario y Eventos | Pendiente |
-| 8 | Estudios | Pendiente |
-| 9 | Finanzas / Planificación Salarial | Pendiente |
-| 10 | Guías y Procedimientos | Pendiente |
-| 11 | Búsqueda | Pendiente |
-| 12 | Automatizaciones | Pendiente |
-| 13 | Integraciones | Pendiente |
-| 14 | IA / Agentes | Pendiente |
-| 15 | Backup y Recuperación | Pendiente |
+| 7 | [Calendario y Eventos](07-calendario-y-eventos.md) | Iniciado |
+| 8 | [Estudios](08-estudios.md) | Iniciado |
+| 9 | [Finanzas / Planificación Salarial](09-finanzas.md) | Iniciado |
+| 10 | [Guías y Procedimientos](10-guias-y-procedimientos.md) | Iniciado |
+| 11 | [Búsqueda](11-busqueda.md) | Iniciado |
+| 12 | [Automatizaciones](12-automatizaciones.md) | Iniciado |
+| 13 | [Integraciones](13-integraciones.md) | Iniciado |
+| 14 | [IA / Agentes](14-ia-agentes.md) | Iniciado |
+| 15 | [Backup y Recuperación](15-backup-y-recuperacion.md) | Iniciado |
 
 Core se numera como módulo 0 para mantener la correspondencia entre el prefijo de cada archivo y el número de módulo. Es una base transversal: no es un módulo funcional de usuario ni altera la secuencia funcional 1–15.
 
