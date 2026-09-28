@@ -23,6 +23,10 @@ Crear una aplicación web personal que centralice información cotidiana, docume
 - Sincronización entre archivos físicos y su representación lógica.
 - Política de búsqueda, backup, automatización y auditoría.
 
+## Prioridad inmediata
+
+Se prioriza el descubrimiento y diseño de IA/Agentes (ADR-003) para identificar casos de uso, agentes necesarios, criterios de evaluación de modelos y límites de datos, permisos y confirmación. Esta prioridad no aprueba un proveedor, modelo, orquestador ni código de producto. La implementación de agentes permanece condicionada por las decisiones transversales de Core e Identidad y Seguridad.
+
 ## Convención de estado
 
 - **Estado actual:** realidad comprobada hoy.
