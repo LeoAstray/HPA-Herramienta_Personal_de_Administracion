@@ -14,6 +14,8 @@ Los agentes internos del producto serán clientes futuros del HPA y deberán usa
 
 El equipo está formado por dos colaboradores. Un agente puede proponer, editar dentro de una tarea autorizada, revisar o ejecutar pruebas, pero una persona conserva la responsabilidad de aprobar decisiones, integrar cambios y publicar resultados. Un agente revisor no debe aprobar como independiente cambios que haya producido él mismo.
 
+ADR-004 y [agentes-desarrollo.md](agentes-desarrollo.md) concretan esos permisos: Developer edita archivos locales y ejecuta comprobaciones breves; Reviewer y Tester informan; Tester realiza la validación independiente. Cualquier colaborador puede aprobar. Las operaciones de escritura Git son manuales, GitHub es de solo lectura para los agentes y las correcciones de revisión y validación vuelven al Developer por petición humana.
+
 ## Acceso y aislamiento futuros
 
 Los futuros agentes deberán usar las mismas fronteras de API, autenticación y autorización que otros clientes. No accederán directamente a datos ni secretos salvo permiso explícito, revocable y con el mínimo alcance. Deben poder sustituirse o desactivarse sin reconstruir el núcleo.
