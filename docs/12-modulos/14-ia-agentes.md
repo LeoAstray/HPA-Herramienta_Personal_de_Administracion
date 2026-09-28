@@ -2,7 +2,7 @@
 
 ## Estado
 
-**Fase 1 en análisis.** Este documento define el alcance funcional propuesto del módulo. No aprueba un proveedor de modelo de IA, un mecanismo de orquestación ni un formato de contrato técnico.
+**Descubrimiento y diseño priorizado.** La Fase 1 funcional está documentada y ADR-003 convierte este módulo en la prioridad inmediata de análisis. Este documento no aprueba un proveedor de modelo de IA, un mecanismo de orquestación, un formato de contrato técnico ni la implementación de un agente.
 
 ## Propósito
 
@@ -94,6 +94,17 @@ Dado que ningún módulo funcional exige aún una capacidad de IA concreta, el M
 - Qué operaciones se consideran de bajo riesgo y autoejecutables, si alguna, en el futuro.
 - Dónde ocurre el procesamiento (local o externo) y cómo se gobierna esa decisión con Integraciones y Seguridad.
 - Formato y detalle del registro de interacciones de un agente.
+
+## Entregables del descubrimiento priorizado
+
+Antes de implementar un agente se documentarán, como mínimo:
+
+- Casos de uso concretos y medibles, con beneficio esperado y módulos afectados.
+- Inventario de agentes candidatos, con responsabilidad, datos accesibles, acciones permitidas y necesidad de confirmación.
+- Criterios comparables para seleccionar o descartar modelos: calidad, coste, latencia, privacidad, capacidad local o externa, mantenimiento y reversibilidad.
+- Clasificación de datos que cada caso de uso podría consultar o enviar, con límites explícitos.
+- Dependencias de Core, Identidad y Seguridad, Integraciones, Búsqueda y Automatizaciones que deben resolverse antes de su implementación.
+- Recomendación de un primer agente, o la decisión justificada de no implementar ninguno todavía.
 
 ## Trazabilidad
 
