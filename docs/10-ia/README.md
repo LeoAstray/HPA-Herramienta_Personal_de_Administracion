@@ -7,3 +7,5 @@ El descubrimiento debe producir, antes de cualquier implementación, casos de us
 Leer primero [contexto-agentes.md](contexto-agentes.md) y [contrato-de-agentes.md](contrato-de-agentes.md).
 
 El análisis activo de los dos ámbitos está en [descubrimiento-ia-agentes.md](descubrimiento-ia-agentes.md). La organización operativa de los agentes de desarrollo está en [agentes-desarrollo.md](agentes-desarrollo.md). Ambos documentos contienen propuestas: todavía no hay un modelo o proveedor aprobado.
+
+ADR-004 fija los permisos y preferencias confirmados de desarrollo. Los [escenarios de evaluación](evaluacion-agentes-desarrollo.md) preparan la comparación de configuraciones incluidas en las suscripciones; su ejecución está pendiente.

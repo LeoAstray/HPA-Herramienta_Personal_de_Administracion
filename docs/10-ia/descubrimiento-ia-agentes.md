@@ -53,7 +53,7 @@ Esta recomendación es una **propuesta de análisis**, no una decisión de imple
 
 ## Configuración operativa propuesta para dos colaboradores
 
-Para cada cambio de código autorizado, un colaborador define el objetivo y conserva la integración final. DEV-01 implementa en un ámbito de archivos delimitado; DEV-02 revisa un diff estable sin haberlo producido; DEV-03 ejecuta o diseña las pruebas pertinentes. El segundo colaborador revisa las decisiones de alcance, las excepciones de seguridad y la publicación cuando proceda.
+ADR-004 confirma el contrato de desarrollo: un colaborador define el objetivo; DEV-01 edita archivos locales delimitados y ejecuta comprobaciones breves; DEV-02 revisa un diff estable sin haberlo producido; DEV-03 realiza la validación independiente. Cualquiera de los dos colaboradores puede aprobar revisión y pruebas. Las correcciones de revisión se piden al Developer y todas las operaciones de escritura Git se realizan manualmente. GitHub es de solo lectura para los agentes. Ambos colaboradores tienen Plus y priorizan consumo, calidad, autonomía y velocidad, en ese orden.
 
 No se asignarán dos agentes escritores al mismo archivo a la vez. La paralelización se reservará para análisis, revisión, pruebas y documentación independientes. Esta organización aprovecha agentes especializados sin perder la revisión cruzada entre las dos personas.
 
@@ -61,7 +61,7 @@ No se asignarán dos agentes escritores al mismo archivo a la vez. La paraleliza
 
 La propuesta es adoptar el flujo **DEV-01 → DEV-02 → DEV-03**, con DEV-04 cuando el cambio sea relevante. Mientras el proyecto siga sin código de producto, estos agentes se aplicarán a documentación, diseño, pruebas de documentación y preparación de la futura implementación; no se simulará una implementación de producción inexistente.
 
-## Límites comunes para cualquier agente
+## Límites para los agentes internos del producto
 
 - Acceso únicamente mediante contratos y operaciones expuestas; nunca acceso directo a almacenamiento.
 - Mínimo privilegio por agente, caso de uso, módulo y tipo de dato.
@@ -79,9 +79,11 @@ La propuesta es adoptar el flujo **DEV-01 → DEV-02 → DEV-03**, con DEV-04 cu
 4. ¿Se exige procesamiento local para algún tipo de dato?
 5. ¿Qué latencia, coste y disponibilidad son aceptables para el uso personal y para el desarrollo?
 6. ¿Qué evidencia debe mostrar cada agente para que una respuesta, revisión o prueba sea verificable?
-7. ¿Qué nivel de autonomía tendrán DEV-01, DEV-02 y DEV-03 sobre ramas, archivos, comandos de prueba y publicaciones?
+7. ¿Cómo se aplicarán en la herramienta elegida los permisos de desarrollo ya definidos por ADR-004?
 
 ## Siguiente trabajo de investigación
+
+Para desarrollo, los permisos ya están definidos en [agentes-desarrollo.md](agentes-desarrollo.md). Se investigarán configuraciones incluidas en las suscripciones usando [escenarios documentales](evaluacion-agentes-desarrollo.md). La selección por rol aún está pendiente. Las preguntas de datos y contratos del producto siguen abiertas.
 
 1. Confirmar los casos de uso iniciales y las fuentes autorizadas de cada ámbito.
 2. Definir el contrato operativo de DEV-01, DEV-02 y DEV-03 para los dos colaboradores.
