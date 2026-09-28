@@ -9,7 +9,7 @@ Esta carpeta describe el producto, sus decisiones y su evolución para que una p
 **Fase:** definición y estudio global de módulos.  
 **Implementación de producto:** no iniciada.  
 **Arquitectura técnica concreta:** pendiente.  
-**Próximo objetivo:** completar la Fase 1, antes de diseñar la arquitectura global.
+**Próximo objetivo:** descubrimiento y diseño de IA/Agentes, antes de elegir agentes, modelos o tecnología; la implementación sigue condicionada por las decisiones de Core e Identidad y Seguridad.
 
 ## Cómo leerla
 
