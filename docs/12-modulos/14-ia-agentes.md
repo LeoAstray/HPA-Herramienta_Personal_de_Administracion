@@ -97,6 +97,8 @@ Dado que ningún módulo funcional exige aún una capacidad de IA concreta, el M
 
 ## Entregables del descubrimiento priorizado
 
+El inventario y la primera priorización se mantienen en [`docs/10-ia/descubrimiento-ia-agentes.md`](../10-ia/descubrimiento-ia-agentes.md). Sus agentes candidatos y su recomendación inicial son propuestas de análisis, no decisiones de implementación.
+
 Antes de implementar un agente se documentarán, como mínimo:
 
 - Casos de uso concretos y medibles, con beneficio esperado y módulos afectados.
