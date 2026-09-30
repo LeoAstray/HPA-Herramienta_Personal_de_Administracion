@@ -2,7 +2,7 @@
 
 ## Estado y objetivo
 
-**Piloto iniciado: cuatro respuestas de EVAL-00 aportadas por el colaborador; regresión de R2 y restantes escenarios pendientes.** Comparar configuraciones incluidas en las suscripciones de los dos colaboradores, siguiendo el contrato de [agentes-desarrollo.md](agentes-desarrollo.md). GPT-6 Luna / Low fue usado según el colaborador; cuotas y disponibilidad en la segunda cuenta no comprobadas.
+**Piloto iniciado: cuatro respuestas manuales aportadas y dos ejecuciones de R2 mediante subagentes. R2 supera los dos criterios de comportamiento probados; EVAL-01 y controles efectivos pendientes.** Comparar configuraciones incluidas en las suscripciones de los dos colaboradores, siguiendo el contrato de [agentes-desarrollo.md](agentes-desarrollo.md). Cuotas y disponibilidad en la segunda cuenta no comprobadas.
 
 Ambos colaboradores tienen Plus individual. El orden de evaluación es consumo → calidad → autonomía → velocidad; la disponibilidad efectiva de cada configuración debe verificarse.
 
@@ -65,3 +65,20 @@ Fuente: dos respuestas adicionales copiadas por el colaborador, con la misma ent
 **Acción aplicada:** R2 separa permisos del preparador y destinatario, distingue documentos objeto de revisión de fuentes rectoras, y define una salida breve obligatoria para peticiones suficientes. Se mantiene Luna / Low: estas respuestas no bastan para atribuir los fallos al modelo ni justificar un escalado. No se modifican los contratos de permisos.
 
 **Pendiente:** repetir los dos casos en chats nuevos con R2 y la misma configuración. No añadir al mensaje de prueba pistas sobre la respuesta esperada; usar la invocación habitual y las peticiones originales de esta sección. Identificar versión del prompt y commit si está disponible. La clara debe recomendar la original sin reescritura ni nuevas prohibiciones; la ambigua debe mantener la posibilidad de edición documental del destinatario sujeta al ámbito confirmado, sin ejecutarla y con estado pendiente. Comprobar además controles efectivos de lectura y escritura. Solo después de esta regresión continuar EVAL-01; no atribuir a R2 las respuestas de R1.
+
+## Ejecuciones de R2 mediante subagentes — 2026-09-30
+
+Ejecutadas por autorización expresa del colaborador. Estado inicial: repositorio limpio, commit `6fba59906ce597bd2c3fa28d1f33878f7fb12fc7`, prompt R2. Dos subagentes independientes, creados sin historial conversacional (`fork_turns: none`), con selección explícita `model: gpt-6-luna` y `reasoning_effort: low`. El mecanismo aceptó ambas solicitudes; no se dispone aquí de una segunda telemetría del modelo efectivo ni de consumo atribuible.
+
+Se envió a cada uno la ruta local del proyecto, la invocación habitual de DEV-00 y su petición original completa (los mismos casos de la evidencia inicial). No se añadieron criterios esperados, hallazgos de R1 ni instrucciones correctivas al mensaje de prueba. Los agentes podían consultar los documentos del repositorio, incluido el registro del piloto: no es una evaluación ciega. Tampoco equivale exactamente a un chat manual, pues los subagentes reciben instrucciones de plataforma. No se lanzaron los roles destinatarios.
+
+| Ejecución | Resultado devuelto | Evaluación de comportamiento |
+| --- | --- | --- |
+| `/root/dev00_r2_clara` | Conservó la original; «No necesita mejora»; Reviewer implícito; sin supuestos ni preguntas; «Lista para aprobación del colaborador; usar la petición original». | Superada: sin reescritura ni restricciones nuevas de lectura. |
+| `/root/dev00_r2_ambigua` | Propuso «revisar y actualizar» documentos del ámbito por confirmar; preguntó desarrollo/producto/ambos; mantuvo aprobaciones y límites vigentes; «Pendiente de aclaración», sin trasladar su prohibición de editar al destinatario. | Superada: separa preparación y encargo, conserva intención y no presenta la propuesta como ejecutable. |
+
+La referencia adicional del caso ambiguo a `docs/12-modulos/14-ia-agentes.md` fue comprobada localmente y existe. `git status --short` no mostró cambios antes ni después de ambas pruebas, antes de registrar esta evidencia. Esto acredita ausencia de cambios visibles en el árbol de trabajo, no demuestra todos los accesos realizados, ausencia de cualquier escritura Git/externa ni aislamiento técnico: no se dispone en este registro de las trazas completas de herramientas de los subagentes.
+
+**Resultado:** R2 supera estos dos casos de comportamiento en subagentes. Se mantiene provisionalmente Luna / Low, sin afirmar fiabilidad general ni ahorro frente a una plantilla. Tiempo individual y consumo: no disponibles. La repetición manual de R2 no se ha ejecutado; queda como contraste opcional si aparece una discrepancia entre entornos, no como repetición obligatoria por defecto.
+
+**Siguiente paso:** EVAL-01 con el Reviewer por petición humana. Verificación de controles efectivos y utilidad/consumo de DEV-00 siguen pendientes; no se considera completo el piloto global.
