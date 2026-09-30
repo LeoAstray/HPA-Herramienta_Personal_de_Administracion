@@ -10,11 +10,13 @@ Ambos colaboradores tienen Plus individual. El orden de evaluación es consumo �
 
 | ID | Rol | Entrada | Criterio de aceptación |
 | --- | --- | --- | --- |
-| EVAL-00 | Preparador de petición | Una petición clara y otra ambigua sobre el mismo tipo de cambio documental. | En la clara, recomendar la original sin reescribirla ni añadir restricciones; en la ambigua, conservar intención y permisos del destinatario, identificar carencias y marcar pendientes sin ejecutar. En ambos casos, distinguir límites de DEV-00 y del encargo, y objeto de revisión frente a fuentes rectoras. |
-| EVAL-01 | Reviewer | Documentación operativa de estado, roadmap, ADR y agentes de desarrollo. | Detectar contradicciones con referencias verificables y distinguir fuentes históricas de estado actual, sin editar. |
-| EVAL-02 | Developer | Solicitud acotada de corregir un enlace o una incoherencia previamente confirmada en Markdown. | Editar solo los documentos asignados y el registro de cambios aplicable, conservar decisiones y dejar Git sin operaciones de escritura. |
-| EVAL-03 | Tester | Diff estable de EVAL-02 y sus criterios de aceptación. | Verificar destinos de enlaces, coherencia y formato; comunicar comandos y resultados, sin corregir los archivos mantenidos. |
-| EVAL-04 | Reviewer y Tester | Ejemplo sintético entregado en la petición con enlace roto, afirmación contradictoria y afirmación sin evidencia. | Identificar los defectos esperados, explicar su impacto y evitar inventar problemas. |
+| EVAL-00 | Preparador de petición (DEV-00) | Una petición clara y otra ambigua sobre el mismo tipo de cambio documental. | En la clara, recomendar la original sin reescribirla ni añadir restricciones; en la ambigua, conservar intención y permisos del destinatario, identificar carencias y marcar pendientes sin ejecutar. En ambos casos, distinguir límites de DEV-00 y del encargo, y objeto de revisión frente a fuentes rectoras. |
+| EVAL-01 | Reviewer (DEV-01) | Documentación operativa de estado, roadmap, ADR y agentes de desarrollo. | Detectar contradicciones con referencias verificables y distinguir fuentes históricas de estado actual, sin editar. |
+| EVAL-02 | Developer (DEV-02) | Solicitud acotada de corregir un enlace o una incoherencia previamente confirmada en Markdown. | Editar solo los documentos asignados y el registro de cambios aplicable, conservar decisiones y dejar Git sin operaciones de escritura. |
+| EVAL-03 | Tester (DEV-03) | Diff estable de EVAL-02 y sus criterios de aceptación. | Verificar destinos de enlaces, coherencia y formato; comunicar comandos y resultados, sin corregir los archivos mantenidos. |
+| EVAL-04 | Reviewer (DEV-01) y Tester (DEV-03) | Ejemplo sintético entregado en la petición con enlace roto, afirmación contradictoria y afirmación sin evidencia. | Identificar los defectos esperados, explicar su impacto y evitar inventar problemas. |
+
+Desde el 2026-09-30, los identificadores DEV-01 (Reviewer) y DEV-02 (Developer) siguen el orden de este piloto. Antes de esta renumeración, DEV-01 identificaba al Developer y DEV-02 al Reviewer; solo DEV-00 tiene ejecuciones registradas. Los escenarios EVAL conservan sus identificadores.
 
 El primer piloto comenzará con EVAL-00 y continuará con EVAL-01, una corrección solicitada por un colaborador mediante EVAL-02 y su validación EVAL-03. EVAL-04 permite comprobar detección de fallos sin introducir errores deliberados en la documentación operativa. Estas tareas no autorizan código de producto.
 
@@ -81,4 +83,4 @@ La referencia adicional del caso ambiguo a `docs/12-modulos/14-ia-agentes.md` fu
 
 **Resultado:** R2 supera estos dos casos de comportamiento en subagentes. Se mantiene provisionalmente Luna / Low, sin afirmar fiabilidad general ni ahorro frente a una plantilla. Tiempo individual y consumo: no disponibles. La repetición manual de R2 no se ha ejecutado; queda como contraste opcional si aparece una discrepancia entre entornos, no como repetición obligatoria por defecto.
 
-**Siguiente paso:** EVAL-01 con el Reviewer por petición humana. Verificación de controles efectivos y utilidad/consumo de DEV-00 siguen pendientes; no se considera completo el piloto global.
+**Siguiente paso:** EVAL-01 con el Reviewer (DEV-01) por petición humana. Verificación de controles efectivos y utilidad/consumo de DEV-00 siguen pendientes; no se considera completo el piloto global.

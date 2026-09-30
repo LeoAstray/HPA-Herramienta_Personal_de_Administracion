@@ -46,21 +46,21 @@ Esta recomendación es una **propuesta de análisis**, no una decisión de imple
 | ID | Agente candidato | Responsabilidad | Alcance inicial | Independencia requerida | Prioridad |
 | --- | --- | --- | --- | --- | --- |
 | DEV-00 | Preparador de petición | Mejorar peticiones complejas o ambiguas antes de asignarlas. | Solo transforma la petición y señala carencias; no ejecuta ni amplía permisos. | El colaborador acepta o corrige la propuesta. | Alta, uso selectivo |
-| DEV-01 | Developer | Implementar cambios aprobados y sus pruebas unitarias. | Rama y archivos asignados; sin despliegues ni servicios externos. | No aprueba su propio cambio. | Alta |
-| DEV-02 | Reviewer | Revisar requisitos, diseño, seguridad, calidad, regresiones y documentación del cambio. | Solo lectura del diff y del contexto necesario; hallazgos accionables. | Debe ser distinto de quien produjo el cambio. | Alta |
-| DEV-03 | Tester | Diseñar casos, ejecutar pruebas, reproducir fallos y comunicar evidencia. | Entorno de pruebas y resultados; no modifica producción. | Puede validar el trabajo de DEV-01. | Alta |
+| DEV-01 | Reviewer | Revisar requisitos, diseño, seguridad, calidad, regresiones y documentación del cambio. | Solo lectura del diff y del contexto necesario; hallazgos accionables. | Debe ser distinto de quien produjo el cambio. | Alta |
+| DEV-02 | Developer | Implementar cambios aprobados y sus pruebas unitarias. | Rama y archivos asignados; sin despliegues ni servicios externos. | No aprueba su propio cambio. | Alta |
+| DEV-03 | Tester | Diseñar casos, ejecutar pruebas, reproducir fallos y comunicar evidencia. | Entorno de pruebas y resultados; no modifica producción. | Puede validar el trabajo de DEV-02. | Alta |
 | DEV-04 | Documentación y trazabilidad | Mantener requisitos, ADR, cambios y evidencias coherentes con lo implementado. | Documentación afectada y referencias de prueba. | Revisión humana de decisiones. | Media |
 | DEV-05 | Coordinador técnico | Descomponer trabajo, detectar dependencias y proponer orden de ejecución. | Solo planificación; no actualiza Asana ni publica sin autorización. | No sustituye decisiones del equipo. | Media |
 
 ## Configuración operativa propuesta para dos colaboradores
 
-ADR-004 confirma el contrato de desarrollo: un colaborador define el objetivo; DEV-01 edita archivos locales delimitados y ejecuta comprobaciones breves; DEV-02 revisa un diff estable sin haberlo producido; DEV-03 realiza la validación independiente. Cualquiera de los dos colaboradores puede aprobar revisión y pruebas. Las correcciones de revisión se piden al Developer y todas las operaciones de escritura Git se realizan manualmente. GitHub es de solo lectura para los agentes. Ambos colaboradores tienen Plus y priorizan consumo, calidad, autonomía y velocidad, en ese orden.
+ADR-004 confirma el contrato de desarrollo: un colaborador define el objetivo; DEV-02 edita archivos locales delimitados y ejecuta comprobaciones breves; DEV-01 revisa un diff estable sin haberlo producido; DEV-03 realiza la validación independiente. Cualquiera de los dos colaboradores puede aprobar revisión y pruebas. Las correcciones de revisión se piden al Developer y todas las operaciones de escritura Git se realizan manualmente. GitHub es de solo lectura para los agentes. Ambos colaboradores tienen Plus y priorizan consumo, calidad, autonomía y velocidad, en ese orden.
 
 No se asignarán dos agentes escritores al mismo archivo a la vez. La paralelización se reservará para análisis, revisión, pruebas y documentación independientes. Esta organización aprovecha agentes especializados sin perder la revisión cruzada entre las dos personas.
 
 ## Recomendación inicial para desarrollo
 
-La propuesta es adoptar **DEV-00 opcional → DEV-01 → DEV-02 → DEV-03**, con DEV-04 cuando el cambio sea relevante. DEV-00 se omite en peticiones ya claras para conservar cuota. Mientras el proyecto siga sin código de producto, estos agentes se aplicarán a documentación, diseño, pruebas de documentación y preparación de la futura implementación; no se simulará una implementación de producción inexistente.
+La propuesta es adoptar **DEV-00 opcional → DEV-02 → DEV-01 → DEV-03**, con DEV-04 cuando el cambio sea relevante. DEV-00 se omite en peticiones ya claras para conservar cuota. Mientras el proyecto siga sin código de producto, estos agentes se aplicarán a documentación, diseño, pruebas de documentación y preparación de la futura implementación; no se simulará una implementación de producción inexistente.
 
 ## Límites para los agentes internos del producto
 
@@ -87,7 +87,7 @@ La propuesta es adoptar **DEV-00 opcional → DEV-01 → DEV-02 → DEV-03**, co
 Para desarrollo, los permisos ya están definidos en [agentes-desarrollo.md](agentes-desarrollo.md). Se investigarán configuraciones incluidas en las suscripciones usando [escenarios documentales](evaluacion-agentes-desarrollo.md). La selección por rol aún está pendiente. Las preguntas de datos y contratos del producto siguen abiertas.
 
 1. Confirmar los casos de uso iniciales y las fuentes autorizadas de cada ámbito.
-2. Definir el contrato operativo de DEV-01, DEV-02 y DEV-03 para los dos colaboradores.
+2. Definir el contrato operativo de DEV-02, DEV-01 y DEV-03 para los dos colaboradores.
 3. Convertir AG-01 en un contrato mínimo de contexto, operaciones y auditoría.
 4. Definir escenarios de evaluación y ejemplos representativos sin datos reales.
 5. Comparar modelos y opciones de ejecución usando esos escenarios y criterios.

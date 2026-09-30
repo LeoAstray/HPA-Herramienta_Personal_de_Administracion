@@ -28,6 +28,8 @@ El 2026-09-30 el colaborador aprueba mantener provisionalmente GPT-6 Luna (`gpt-
 
 La selección se aplica manualmente antes de ejecutar DEV-00; los documentos no cambian el modelo del chat. La configuración ejecutable sigue pendiente. Los demás modelos se mantienen como propuestas hasta evaluar sus escenarios. La matriz se conserva en `docs/10-ia/matriz-modelos-agentes-desarrollo.md`.
 
+El 2026-09-30 el colaborador aprueba renumerar los roles aún no probados para alinearlos con el piloto documental: Reviewer pasa de DEV-02 a DEV-01 y Developer de DEV-01 a DEV-02. DEV-00, DEV-03, DEV-04 y DEV-05 conservan sus identificadores. La numeración no impone el flujo de ejecución: en un cambio habitual, Developer precede a Reviewer. Los permisos y candidatos de modelo y esfuerzo permanecen asociados a sus roles.
+
 ## Referencias
 
 - [Contratos operativos](../10-ia/agentes-desarrollo.md)
