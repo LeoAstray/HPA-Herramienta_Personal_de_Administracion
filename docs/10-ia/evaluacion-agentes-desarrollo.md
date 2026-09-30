@@ -2,7 +2,7 @@
 
 ## Estado y objetivo
 
-**Piloto iniciado: dos respuestas de EVAL-00 aportadas por el colaborador; restantes escenarios pendientes.** Comparar configuraciones incluidas en las suscripciones de los dos colaboradores, siguiendo el contrato de [agentes-desarrollo.md](agentes-desarrollo.md). GPT-6 Luna / Low fue usado según el colaborador; cuotas y disponibilidad en la segunda cuenta no comprobadas.
+**Piloto iniciado: cuatro respuestas de EVAL-00 aportadas por el colaborador; regresión de R2 y restantes escenarios pendientes.** Comparar configuraciones incluidas en las suscripciones de los dos colaboradores, siguiendo el contrato de [agentes-desarrollo.md](agentes-desarrollo.md). GPT-6 Luna / Low fue usado según el colaborador; cuotas y disponibilidad en la segunda cuenta no comprobadas.
 
 Ambos colaboradores tienen Plus individual. El orden de evaluación es consumo → calidad → autonomía → velocidad; la disponibilidad efectiva de cada configuración debe verificarse.
 
@@ -10,7 +10,7 @@ Ambos colaboradores tienen Plus individual. El orden de evaluación es consumo �
 
 | ID | Rol | Entrada | Criterio de aceptación |
 | --- | --- | --- | --- |
-| EVAL-00 | Preparador de petición | Una petición clara y otra ambigua sobre el mismo tipo de cambio documental. | Omitirse en la petición clara; en la ambigua, conservar intención y permisos, identificar carencias y producir criterios verificables sin ejecutar la tarea. |
+| EVAL-00 | Preparador de petición | Una petición clara y otra ambigua sobre el mismo tipo de cambio documental. | En la clara, recomendar la original sin reescribirla ni añadir restricciones; en la ambigua, conservar intención y permisos del destinatario, identificar carencias y marcar pendientes sin ejecutar. En ambos casos, distinguir límites de DEV-00 y del encargo, y objeto de revisión frente a fuentes rectoras. |
 | EVAL-01 | Reviewer | Documentación operativa de estado, roadmap, ADR y agentes de desarrollo. | Detectar contradicciones con referencias verificables y distinguir fuentes históricas de estado actual, sin editar. |
 | EVAL-02 | Developer | Solicitud acotada de corregir un enlace o una incoherencia previamente confirmada en Markdown. | Editar solo los documentos asignados y el registro de cambios aplicable, conservar decisiones y dejar Git sin operaciones de escritura. |
 | EVAL-03 | Tester | Diff estable de EVAL-02 y sus criterios de aceptación. | Verificar destinos de enlaces, coherencia y formato; comunicar comandos y resultados, sin corregir los archivos mantenidos. |
@@ -53,4 +53,15 @@ Fuente: peticiones y respuestas copiadas por el colaborador en la conversación,
 
 **Decisión provisional:** mantener GPT-6 Luna / Low para DEV-00, aprobada por el colaborador. Dos casos no demuestran fiabilidad general, ahorro de cuota ni utilidad frente a una plantilla manual. Consumo: no disponible. Los tiempos no sustituyen consumo.
 
-**Pendiente:** comprobar los dos casos con el prompt revisado (contexto rector, configuración explícita y estado listo/pendiente), verificar controles efectivos de lectura y escritura, y continuar EVAL-01. No atribuir a esta revisión las pruebas de la versión anterior.
+## Regresión de R1 (CHG-011) — 2026-09-30
+
+Fuente: dos respuestas adicionales copiadas por el colaborador, con la misma entrada de cada caso y GPT-6 Luna / Low según el contexto comunicado. Las limitaciones de trazas, consumo y estado exacto son las mismas que en la evidencia inicial. Las horas son las mostradas en los mensajes aportados; no sustituyen una traza de ejecución.
+
+| Caso | Hora y duración comunicadas | Resultado observado | Evaluación |
+| --- | --- | --- | --- |
+| Ambiguo | 17:36; 20 s | Preguntó por desarrollo/producto y marcó «Pendiente de aclaración», pero incluyó «no ejecutar cambios» en el encargo y atribuyó la preparación a la petición original. | No supera completamente la regresión: confunde límites de DEV-00 con acciones del destinatario. |
+| Claro | 17:39; 13 s | Marcó «Lista para aprobación», pero reescribió una petición suficiente e incorporó «leer únicamente» los dos documentos y no revisar otros. | No supera completamente la regresión: expansión innecesaria y restricción de lectura no solicitada. |
+
+**Acción aplicada:** R2 separa permisos del preparador y destinatario, distingue documentos objeto de revisión de fuentes rectoras, y define una salida breve obligatoria para peticiones suficientes. Se mantiene Luna / Low: estas respuestas no bastan para atribuir los fallos al modelo ni justificar un escalado. No se modifican los contratos de permisos.
+
+**Pendiente:** repetir los dos casos en chats nuevos con R2 y la misma configuración. No añadir al mensaje de prueba pistas sobre la respuesta esperada; usar la invocación habitual y las peticiones originales de esta sección. Identificar versión del prompt y commit si está disponible. La clara debe recomendar la original sin reescritura ni nuevas prohibiciones; la ambigua debe mantener la posibilidad de edición documental del destinatario sujeta al ámbito confirmado, sin ejecutarla y con estado pendiente. Comprobar además controles efectivos de lectura y escritura. Solo después de esta regresión continuar EVAL-01; no atribuir a R2 las respuestas de R1.

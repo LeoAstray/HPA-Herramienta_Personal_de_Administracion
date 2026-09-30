@@ -44,7 +44,7 @@ Cada cambio relevante sigue el flujo del proyecto: `Análisis -> Diseño -> Docu
 
 DEV-00 es opcional porque cada ejecución consume parte de la suscripción. Se activa cuando falten criterios de aceptación, existan varias interpretaciones razonables, haya riesgos o permisos que delimitar, o intervengan varios agentes. Una petición breve, clara y de bajo riesgo pasa directamente al rol correspondiente.
 
-DEV-00 devuelve dos elementos: la petición original intacta y una propuesta mejorada. La propuesta usa, cuando aporten información, estos campos:
+Si se invoca DEV-00 con una petición suficiente, devuelve la original intacta y recomienda usarla sin redactar una alternativa. Si hace falta mejorarla, añade una propuesta que usa, cuando aporten información, estos campos:
 
 - resultado esperado;
 - contexto y fuentes necesarias;
@@ -56,6 +56,8 @@ DEV-00 devuelve dos elementos: la petición original intacta y una propuesta mej
 - preguntas que cambiarían materialmente el resultado.
 
 No añadirá requisitos por iniciativa propia. Distinguirá datos confirmados, supuestos propuestos y preguntas. El colaborador elige qué versión se envía al siguiente agente.
+
+Los límites de la ejecución de DEV-00 (preparar mediante lectura sin editar ni ejecutar) no se transfieren automáticamente al encargo destinatario. Este conserva las acciones solicitadas y autorizadas en la petición original, sujetas al contrato del rol y a las aclaraciones pendientes. Los documentos objeto de revisión no excluyen la consulta de fuentes rectoras; no se inventarán prohibiciones adicionales de lectura.
 
 **Configuración provisional de DEV-00:** GPT-6 Luna (`gpt-6-luna`) con esfuerzo Low (`low`), aprobada el 2026-09-30 tras dos respuestas iniciales satisfactorias de EVAL-00. La selección se hace antes de la ejecución en el cliente; el [prompt manual](prompts/dev-00-preparar-peticion.md) no cambia el modelo ni configura un agente ejecutable. No escalar ni sustituirlo sin autorización del colaborador. Si la configuración efectiva no es visible, declararla no verificada.
 
@@ -81,7 +83,7 @@ La petición manual indicará objetivo, colaborador responsable, rol, archivos e
 
 | Rol | Salida mínima |
 | --- | --- |
-| Preparador de petición | Petición original, propuesta mejorada, supuestos introducidos y preguntas materiales pendientes. |
+| Preparador de petición | Petición original, recomendación y estado listo/pendiente; propuesta mejorada solo si hace falta, supuestos introducidos y preguntas materiales pendientes. |
 | Developer | Archivos locales cambiados, explicación breve, criterios cubiertos, comandos y resultados de comprobaciones breves y pruebas pendientes para el Tester. |
 | Reviewer | Diff o estado revisado; hallazgos con archivo, ubicación, impacto y evidencia; declaración explícita si no hay hallazgos. |
 | Tester | Estado examinado, comandos y casos ejecutados, resultado esperado y observado, fallos reproducibles y comprobaciones no ejecutadas. |
