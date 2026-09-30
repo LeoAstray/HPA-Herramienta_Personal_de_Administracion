@@ -2,7 +2,7 @@
 
 ## Estado y fecha
 
-**Decisión de organización y permisos**, basada en las respuestas del propietario del 2026-09-28. Actualizada el 2026-09-30 con la selección provisional de DEV-00. Configuración ejecutable y selección de los demás modelos pendientes.
+**Decisión de organización y permisos**, basada en las respuestas del propietario del 2026-09-28. Actualizada el 2026-09-30 con la selección provisional de DEV-00 y la política provisional de modelos de DEV-02. Configuración ejecutable y selección de los demás roles pendientes.
 
 ## Contexto
 
@@ -26,9 +26,11 @@ Se aprueban comprobaciones locales breves del Developer dentro del alcance asign
 
 El 2026-09-30 el colaborador aprueba mantener provisionalmente GPT-6 Luna (`gpt-6-luna`) con esfuerzo Low (`low`) para DEV-00, tras aportar dos respuestas satisfactorias de EVAL-00. Esta evidencia no demuestra ahorro de cuota ni verificación de operaciones realizadas. La revisión posterior del prompt requiere una comprobación de regresión. No se permite escalado automático; una alternativa requiere autorización humana.
 
-La selección se aplica manualmente antes de ejecutar DEV-00; los documentos no cambian el modelo del chat. La configuración ejecutable sigue pendiente. Los demás modelos se mantienen como propuestas hasta evaluar sus escenarios. La matriz se conserva en `docs/10-ia/matriz-modelos-agentes-desarrollo.md`.
+La selección se aplica manualmente antes de ejecutar DEV-00; los documentos no cambian el modelo del chat. La configuración ejecutable sigue pendiente. La política de Developer se actualiza mediante la decisión posterior de esta ADR; los demás roles conservan candidatos sujetos al piloto. La matriz se conserva en `docs/10-ia/matriz-modelos-agentes-desarrollo.md`.
 
 El 2026-09-30 el colaborador aprueba renumerar los roles aún no probados para alinearlos con el piloto documental: Reviewer pasa de DEV-02 a DEV-01 y Developer de DEV-01 a DEV-02. DEV-00, DEV-03, DEV-04 y DEV-05 conservan sus identificadores. La numeración no impone el flujo de ejecución: en un cambio habitual, Developer precede a Reviewer. Los permisos y candidatos de modelo y esfuerzo permanecen asociados a sus roles.
+
+El 2026-09-30 el colaborador aprueba provisionalmente GPT-6.1 Sol (gpt-6.1-sol) / Medium (medium) como configuración habitual de Developer DEV-02, con GPT-6 Luna (gpt-6-luna) / Medium (medium) autorizado para tareas sencillas y acotadas. Se seleccionará y registrará antes de cada encargo. Sol se usará por defecto para funcionalidades, lógica de negocio, refactorizaciones y cambios con dependencias entre archivos; Luna puede usarse para enlaces, cambios mecánicos y correcciones pequeñas con criterios claros y bajo riesgo. Cambiar de modelo durante una ejecución, usar otra configuración o sustituir un modelo no disponible requiere autorización humana. Esta decisión no configura el cliente ni autoriza implementar producto; tampoco demuestra ahorro o calidad comparativa. EVAL-02 solo aporta evidencia documental con Luna, pendiente de EVAL-03; Sol como Developer aún no se ha evaluado.
 
 ## Referencias
 

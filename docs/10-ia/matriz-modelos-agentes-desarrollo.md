@@ -2,7 +2,7 @@
 
 ## Estado y fecha de consulta
 
-**Investigación documentada el 2026-09-30; DEV-00 seleccionado provisionalmente; un caso documental de DEV-01 evaluado satisfactoriamente; demás roles pendientes de ejecución.** La disponibilidad real debe comprobarse en el selector de cada cuenta y cliente. Ambos colaboradores tienen Plus y no usarán API de pago ni créditos adicionales.
+**Investigación documentada el 2026-09-30; DEV-00 y política de modelos de DEV-02 aprobados provisionalmente; EVAL-01 documental satisfactorio; EVAL-02 ejecutado con Luna y pendiente de EVAL-03.** La disponibilidad real debe comprobarse en el selector de cada cuenta y cliente. Ambos colaboradores tienen Plus y no usarán API de pago ni créditos adicionales.
 
 ## Evidencia oficial
 
@@ -12,25 +12,25 @@
 - [Prácticas de prompts y skills](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra): las instrucciones excesivas y lecturas obligatorias innecesarias consumen contexto; conviene aplicar instrucciones específicas al trabajo y mantener descripciones de skills breves.
 - [Evaluación de skills](https://developers.openai.com/blog/eval-skills): una evaluación útil mide resultado, proceso, estilo y eficiencia con un conjunto pequeño de casos y controles deterministas.
 
-## Candidatos por rol
+## Selecciones provisionales y candidatos por rol
 
-| Rol | Configuración inicial | Escalado condicionado | Motivo e hipótesis a comprobar |
+| Rol | Configuración inicial | Alternativa o escalado condicionado | Motivo e hipótesis a comprobar |
 | --- | --- | --- | --- |
 | DEV-00 Preparador de petición | **Selección provisional aprobada:** GPT-6 Luna (`gpt-6-luna`), esfuerzo Low (`low`) | Solo con autorización humana: evaluar Luna Medium si omite ambigüedades materiales | Dos respuestas iniciales satisfactorias; ahorro de consumo no demostrado y prompt revisado pendiente de regresión. |
 | DEV-01 Reviewer | GPT-6.1 Sol Medium | Sol High para seguridad, arquitectura, datos o diffs amplios; GPT-6 Sol equivalente si 6.1 no aparece | EVAL-01 documental satisfactorio con GPT-6.1 Sol / Medium confirmado por el colaborador; consumo y telemetría no disponibles. Una ejecución no demuestra fiabilidad general ni selección definitiva. |
-| DEV-02 Developer | GPT-6 Luna Medium para cambios pequeños y acotados | GPT-6.1 Sol Medium para cambios coordinados o complejos; GPT-6 Sol Medium si 6.1 no aparece | Empezar con la opción eficiente y escalar cuando la tarea requiera juicio sostenido. |
+| DEV-02 Developer | **Configuración habitual aprobada provisionalmente:** GPT-6.1 Sol (`gpt-6.1-sol`) / Medium (`medium`) | **Alternativa autorizada por tarea:** GPT-6 Luna (`gpt-6-luna`) / Medium (`medium`) para tareas sencillas y acotadas | Sol para funcionalidades, lógica, refactorizaciones y cambios con dependencias; Luna para enlaces, cambios mecánicos y correcciones pequeñas con criterios claros y bajo riesgo. EVAL-02 documental con Luna pendiente de validación independiente; Sol como Developer aún no evaluado. |
 | DEV-03 Tester | GPT-6 Luna Medium | Sol Medium cuando haya fallos ambiguos, integración entre módulos o diagnóstico complejo | Casos y comandos claros favorecen Luna; el diagnóstico puede necesitar Sol. |
 | DEV-04 Documentación | GPT-6 Luna Low o Medium | Sol Medium para ADR o cambios transversales | Las ediciones mecánicas son acotadas; las decisiones necesitan más razonamiento. |
 | DEV-05 Coordinación | GPT-6 Luna High | Sol Medium para dependencias transversales o planificación incierta | La planificación clara puede resolverse eficientemente; el conflicto de requisitos requiere Sol. |
 
-DEV-00 se mantiene por decisión del colaborador tras los dos casos aportados de EVAL-00; los demás roles son puntos de partida. Ninguna selección demuestra el consumo exacto de Plus. GPT-6.1 Sol está sujeto al despliegue y al cliente; el piloto registrará el modelo que realmente aparezca y se use. Astra no entra en la primera comparación porque Plus documenta Sol y Luna como opciones incluidas y el equipo prioriza cuota.
+DEV-00 se mantiene por decisión del colaborador tras los dos casos aportados de EVAL-00. El colaborador aprueba provisionalmente Sol / Medium como opción habitual de DEV-02 y Luna / Medium para tareas sencillas. Reviewer, Tester, Documentación y Coordinación conservan sus candidatos. Ninguna selección demuestra el consumo exacto de Plus. GPT-6.1 Sol está sujeto al despliegue y al cliente; el piloto registrará el modelo que realmente aparezca y se use. Astra no entra en la primera comparación porque Plus documenta Sol y Luna como opciones incluidas y el equipo prioriza cuota.
 
 Para DEV-00, seleccionar modelo y esfuerzo antes de invocarlo. Los Markdown no cambian la configuración del chat. Una futura configuración ejecutable deberá fijar ambos valores sin alterar los modelos de los demás roles; su creación y verificación siguen pendientes. Véanse el [prompt](prompts/dev-00-preparar-peticion.md) y las [evidencias iniciales](evaluacion-agentes-desarrollo.md).
 
 ## Política de selección por tarea
 
 1. Omitir DEV-00 cuando la petición ya contenga objetivo, alcance, permisos y criterio de aceptación suficientes.
-2. Empezar con Luna para transformaciones, comprobaciones y cambios claramente acotados.
+2. Para Developer, seleccionar antes de ejecutar Sol / Medium por defecto; puede seleccionarse Luna / Medium para tareas sencillas, acotadas y de bajo riesgo. Registrar la configuración usada; los documentos no cambian el modelo del cliente. Si no está disponible o se necesita cambiarlo durante una ejecución, solicitar autorización humana. Para los demás roles, mantener las configuraciones de su fila.
 3. Usar Sol desde el inicio para revisiones de riesgo alto o cambios que conecten varias áreas.
 4. Escalar una sola vez cuando el resultado no alcance un criterio concreto; registrar el motivo.
 5. No repetir una tarea completa solo para comparar modelos salvo que forme parte del piloto acordado.

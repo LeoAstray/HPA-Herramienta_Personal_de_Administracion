@@ -2,7 +2,7 @@
 
 ## Estado y objetivo
 
-**Piloto iniciado: cuatro respuestas manuales de DEV-00, dos ejecuciones de R2 mediante subagentes y una respuesta de EVAL-01 aportada. R2 supera los dos casos probados; EVAL-01 supera los criterios documentales de su caso. EVAL-02 preparado, no ejecutado; controles efectivos pendientes.** Comparar configuraciones incluidas en las suscripciones de los dos colaboradores, siguiendo el contrato de [agentes-desarrollo.md](agentes-desarrollo.md). Cuotas y disponibilidad en la segunda cuenta no comprobadas.
+**Piloto iniciado: cuatro respuestas manuales de DEV-00, dos ejecuciones de R2 mediante subagentes y respuestas de EVAL-01 y EVAL-02 aportadas. R2 supera los dos casos probados; EVAL-01 supera los criterios documentales de su caso. EVAL-02 satisfactorio en comprobación local del cambio, pendiente de EVAL-03; controles efectivos pendientes.** Comparar configuraciones incluidas en las suscripciones de los dos colaboradores, siguiendo el contrato de [agentes-desarrollo.md](agentes-desarrollo.md). Cuotas y disponibilidad en la segunda cuenta no comprobadas.
 
 Ambos colaboradores tienen Plus individual. El orden de evaluación es consumo → calidad → autonomía → velocidad; la disponibilidad efectiva de cada configuración debe verificarse.
 
@@ -108,4 +108,16 @@ La entrada pide revisión de estado, roadmap, ADR y todos los Markdown de `docs/
 
 **Selección:** resultado satisfactorio con el candidato GPT-6.1 Sol / Medium; no implica aprobación definitiva del modelo, fiabilidad general ni ventaja de consumo. DEV-00 mantiene Luna / Low provisionalmente.
 
-**Siguiente paso actual:** ejecutar EVAL-02 por petición humana usando el [encargo preparado para Developer DEV-02](prompts/eval-02-developer-enlaces-adr.md), GPT-6 Luna / Medium candidato. Corregirá solo los destinos ADR-001/002 del índice y creará su registro CHG-016. EVAL-02 no se ha ejecutado; los enlaces permanecen rotos. EVAL-03 validará después un diff estable. Las indicaciones anteriores de «siguiente paso» describen el momento en que se registró cada evidencia.
+**Siguiente paso tras EVAL-01:** ejecutar EVAL-02 por petición humana usando el [encargo preparado para Developer DEV-02](prompts/eval-02-developer-enlaces-adr.md), GPT-6 Luna / Medium. La ejecución posterior se registra a continuación. Las indicaciones anteriores de «siguiente paso» describen el momento en que se registró cada evidencia.
+
+## Evidencia de EVAL-02 — Developer DEV-02 — 2026-09-30
+
+Fuente: petición y respuesta pegadas por el colaborador, que confirma GPT-6 Luna / Medium (`gpt-6-luna`, `medium`). La petición coincide en contenido con el bloque del encargo guardado; no se cambia retrospectivamente su configuración. Una petición y una respuesta aportadas; tiempo mostrado de 1 min 8 s, hora 23:28. No hay telemetría independiente, consumo atribuible, tamaño total de contexto ni trazas completas de herramientas.
+
+El Developer comunica HEAD inicial/final `4739e2141c79e849f5144e7da7a389487baa4bbb`, estado inicial limpio y estado final limitado al índice modificado y CHG-016 nuevo. Declara existencia de destinos, diff limitado a dos sustituciones y `git diff --check` sin incidencias, sin escrituras Git/externas. El agente principal comprueba posteriormente el mismo HEAD, estado final, dos destinos existentes, diff limitado y contenido de CHG-016 con motivo, comprobaciones y validación pendiente. No reconstruye el estado inicial ni todos los accesos realizados por el Developer.
+
+**Resultado:** satisfactorio para esta corrección documental en la comprobación local, pendiente de validación independiente EVAL-03. No se identifica desviación del ámbito en los archivos observados ni se requieren correcciones locales en esta comprobación. Los cambios del Developer se conservan sin editarlos. El registro CHG-016 y la respuesta distinguen comprobaciones propias de validación independiente y aislamiento. No se afirma ausencia demostrada de toda escritura Git/externa ni fiabilidad general para código; consumo no comparable.
+
+**Decisión posterior:** el colaborador aprueba provisionalmente Sol 6.1 / Medium como configuración habitual de Developer y Luna / Medium para tareas sencillas y acotadas (ADR-004). Esta decisión no deriva de una comparación de código entre modelos: EVAL-02 solo prueba Luna en documentación; Sol como Developer sigue sin evaluarse.
+
+**Siguiente paso actual:** EVAL-03 con Tester DEV-03, GPT-6 Luna / Medium candidato, sobre el índice y CHG-016 de EVAL-02. Distinguir estos dos archivos de las actualizaciones documentales posteriores de CHG-017 presentes en el árbol. No modificar el índice ni CHG-016 durante la validación. Los demás hallazgos de EVAL-01 siguen pendientes.

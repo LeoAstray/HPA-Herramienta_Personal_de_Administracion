@@ -2,7 +2,11 @@
 
 ## Estado
 
-**Contrato operativo definido por el equipo; configuración ejecutable pendiente.** DEV-00 tiene una selección provisional aprobada: GPT-6 Luna / Low. Reviewer DEV-01 supera el caso documental EVAL-01 con GPT-6.1 Sol / Medium confirmado por el colaborador, sin selección definitiva ni controles efectivos verificados. EVAL-02 del Developer está preparado, no ejecutado. Los demás modelos siguen siendo candidatos del piloto; las conexiones siguen pendientes.
+**Contrato operativo definido por el equipo; configuración ejecutable pendiente.** DEV-00 tiene una selección provisional aprobada: GPT-6 Luna / Low. Reviewer DEV-01 supera el caso documental EVAL-01 con GPT-6.1 Sol / Medium confirmado por el colaborador, sin selección definitiva ni controles efectivos verificados. EVAL-02 del Developer se ha ejecutado con Luna / Medium y queda pendiente de EVAL-03. Developer DEV-02 tiene una política provisional aprobada: Sol 6.1 / Medium por defecto y Luna / Medium para tareas sencillas y acotadas. Los demás modelos siguen siendo candidatos del piloto; las conexiones siguen pendientes.
+
+## Selección de modelo del Developer
+
+**Decisión provisional del colaborador, 2026-09-30:** usar GPT-6.1 Sol (gpt-6.1-sol) / Medium (medium) como opción habitual de DEV-02. Para tareas sencillas y acotadas se autoriza GPT-6 Luna (gpt-6-luna) / Medium (medium). Sol se prioriza para funcionalidades, lógica, refactorizaciones y cambios con dependencias; Luna puede seleccionarse para enlaces, cambios mecánicos y correcciones pequeñas con criterios claros y bajo riesgo. La configuración se selecciona antes de ejecutar y se registra por tarea. Cambiarla durante la ejecución o sustituirla por otra no disponible requiere autorización humana. Los Markdown no cambian el modelo del cliente. El resultado documental de EVAL-02 no demuestra capacidad para código ni constituye una evaluación de Sol como Developer.
 
 ## Entorno y prioridades confirmados
 
@@ -123,4 +127,4 @@ Cada tarea debe dejar, en proporción a su riesgo: objetivo, cambios realizados,
 
 Los modelos se compararán por rol y no como una elección única: capacidad de razonamiento y revisión, calidad de edición de código, fiabilidad de pruebas, coste, latencia, contexto disponible, privacidad, capacidad de usar herramientas y facilidad de sustituirlos. La comparación partirá de tareas representativas y datos sintéticos o autorizados.
 
-La [matriz inicial de modelos](matriz-modelos-agentes-desarrollo.md) contiene la selección provisional de DEV-00 y los candidatos de los demás roles, sujetos a disponibilidad en cada cuenta Plus y a los resultados del piloto.
+La [matriz de modelos](matriz-modelos-agentes-desarrollo.md) contiene la selección provisional de DEV-00, la política provisional aprobada de DEV-02 y los candidatos de los demás roles, sujetos a disponibilidad en cada cuenta Plus y a los resultados del piloto.
