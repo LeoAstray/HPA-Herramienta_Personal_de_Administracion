@@ -2,7 +2,7 @@
 
 ## Estado y objetivo
 
-**Piloto iniciado: cuatro respuestas manuales aportadas y dos ejecuciones de R2 mediante subagentes. R2 supera los dos criterios de comportamiento probados; EVAL-01 y controles efectivos pendientes.** Comparar configuraciones incluidas en las suscripciones de los dos colaboradores, siguiendo el contrato de [agentes-desarrollo.md](agentes-desarrollo.md). Cuotas y disponibilidad en la segunda cuenta no comprobadas.
+**Piloto iniciado: cuatro respuestas manuales de DEV-00, dos ejecuciones de R2 mediante subagentes y una respuesta de EVAL-01 aportada. R2 supera los dos casos probados; EVAL-01 supera los criterios documentales de su caso. EVAL-02 preparado, no ejecutado; controles efectivos pendientes.** Comparar configuraciones incluidas en las suscripciones de los dos colaboradores, siguiendo el contrato de [agentes-desarrollo.md](agentes-desarrollo.md). Cuotas y disponibilidad en la segunda cuenta no comprobadas.
 
 Ambos colaboradores tienen Plus individual. El orden de evaluación es consumo → calidad → autonomía → velocidad; la disponibilidad efectiva de cada configuración debe verificarse.
 
@@ -16,7 +16,7 @@ Ambos colaboradores tienen Plus individual. El orden de evaluación es consumo �
 | EVAL-03 | Tester (DEV-03) | Diff estable de EVAL-02 y sus criterios de aceptación. | Verificar destinos de enlaces, coherencia y formato; comunicar comandos y resultados, sin corregir los archivos mantenidos. |
 | EVAL-04 | Reviewer (DEV-01) y Tester (DEV-03) | Ejemplo sintético entregado en la petición con enlace roto, afirmación contradictoria y afirmación sin evidencia. | Identificar los defectos esperados, explicar su impacto y evitar inventar problemas. |
 
-Desde el 2026-09-30, los identificadores DEV-01 (Reviewer) y DEV-02 (Developer) siguen el orden de este piloto. Antes de esta renumeración, DEV-01 identificaba al Developer y DEV-02 al Reviewer; solo DEV-00 tiene ejecuciones registradas. Los escenarios EVAL conservan sus identificadores.
+Desde el 2026-09-30, los identificadores DEV-01 (Reviewer) y DEV-02 (Developer) siguen el orden de este piloto. Antes de esta renumeración, DEV-01 identificaba al Developer y DEV-02 al Reviewer; al renumerar, solo DEV-00 tenía ejecuciones registradas. Los escenarios EVAL conservan sus identificadores.
 
 El primer piloto comenzará con EVAL-00 y continuará con EVAL-01, una corrección solicitada por un colaborador mediante EVAL-02 y su validación EVAL-03. EVAL-04 permite comprobar detección de fallos sin introducir errores deliberados en la documentación operativa. Estas tareas no autorizan código de producto.
 
@@ -84,3 +84,28 @@ La referencia adicional del caso ambiguo a `docs/12-modulos/14-ia-agentes.md` fu
 **Resultado:** R2 supera estos dos casos de comportamiento en subagentes. Se mantiene provisionalmente Luna / Low, sin afirmar fiabilidad general ni ahorro frente a una plantilla. Tiempo individual y consumo: no disponibles. La repetición manual de R2 no se ha ejecutado; queda como contraste opcional si aparece una discrepancia entre entornos, no como repetición obligatoria por defecto.
 
 **Siguiente paso:** EVAL-01 con el Reviewer (DEV-01) por petición humana. Verificación de controles efectivos y utilidad/consumo de DEV-00 siguen pendientes; no se considera completo el piloto global.
+
+## Evidencia de EVAL-01 — Reviewer DEV-01 — 2026-09-30
+
+**Fuente:** [petición y respuesta completas aportadas por el colaborador](evidencias/eval-01-2026-09-30-peticion-y-respuesta.md), conservadas como evidencia sin cambiar sus afirmaciones. El colaborador confirma después GPT-6.1 Sol / Medium (`gpt-6.1-sol`, `medium`). La configuración se registra por declaración humana, sin telemetría independiente; el cliente y su versión exactos no constan en la evidencia pegada.
+
+La entrada pide revisión de estado, roadmap, ADR y todos los Markdown de `docs/10-ia/`, con fuentes rectoras aplicables y prohibición de editar, escribir en Git/GitHub/Asana, instalar o lanzar agentes. No incluye pistas sobre defectos concretos. Criterio: detectar contradicciones verificables y distinguir fuentes históricas de estado actual.
+
+- **Estado comunicado por Reviewer:** HEAD `670117cc3c340b055a118476e62baa1ca0d8e77b`, árbol limpio al inicio y final, sin diff local ni preparado. El agente principal comprobó posteriormente ese mismo HEAD y árbol limpio antes de registrar la evidencia; esto no reconstruye el estado durante la ejecución.
+- **Tiempo comunicado:** 3 min 5 s; hora mostrada en el texto: 19:10. No es una medición independiente.
+- **Rondas:** una petición y una respuesta aportadas; no constan reintentos ni correcciones humanas durante la ejecución. Confirmación posterior del modelo y evaluación humana del resultado.
+- **Consumo/contexto:** consumo atribuible, cuota y tamaño total del contexto no disponibles; no comparables con otra configuración.
+
+| Hallazgo | Evidencia contrastada localmente | Resultado |
+| --- | --- | --- |
+| P2: enlaces ADR-001/002 rotos | `docs/13-adrs/indice.md`, líneas 5–6, apunta a carpetas inexistentes. Los Markdown históricos existen bajo `docs/general-docs/fuentes/adrs/ADR-001/` y `ADR-002/`. | Confirmado; seleccionado para EVAL-02. |
+| P2: README de IA presenta contratos y selección provisional como pendientes | `docs/10-ia/README.md`, línea 9, frente a ADR-004, líneas 27–29, y estado del contrato de desarrollo. | Confirmado; pendiente de corrección posterior. |
+| P2: estados de evaluación desactualizados | `docs/10-ia/README.md`, línea 11, y prompt DEV-00, línea 5, frente al registro de las ejecuciones R2 y estado del proyecto. | Confirmado; pendiente de corrección posterior. |
+
+**Evaluación:** supera los criterios documentales de este caso. Los tres hallazgos tienen ubicación, evidencia e impacto y no se identifican falsos positivos entre ellos. La respuesta distingue registros históricos, selección provisional de desarrollo, propuestas del producto y límites de arquitectura; reconoce la renumeración. No se afirma exhaustividad ni ausencia de omisiones: no existe un inventario completo independiente de defectos esperados para este caso real. No se ejecutaron pruebas de agentes adicionales para contrastarlo.
+
+**Permisos y evidencia de proceso:** la respuesta declara solo lectura y enumera Git sin bloqueos opcionales, lectura numerada, búsqueda y comprobaciones de rutas; declara 27 enlaces locales comprobados, dos rotos, 12 rutas únicas existentes y verificación del commit de R2 como antecesor. Son resultados comunicados, no trazas completas aportadas. No declara ediciones, correcciones, aprobación, consulta de GitHub/Asana ni lanzamiento de agentes. La salida es compatible con el contrato, pero no prueba todos los accesos, ausencia de toda escritura Git/externa ni aislamiento técnico. Los controles efectivos siguen pendientes.
+
+**Selección:** resultado satisfactorio con el candidato GPT-6.1 Sol / Medium; no implica aprobación definitiva del modelo, fiabilidad general ni ventaja de consumo. DEV-00 mantiene Luna / Low provisionalmente.
+
+**Siguiente paso actual:** ejecutar EVAL-02 por petición humana usando el [encargo preparado para Developer DEV-02](prompts/eval-02-developer-enlaces-adr.md), GPT-6 Luna / Medium candidato. Corregirá solo los destinos ADR-001/002 del índice y creará su registro CHG-016. EVAL-02 no se ha ejecutado; los enlaces permanecen rotos. EVAL-03 validará después un diff estable. Las indicaciones anteriores de «siguiente paso» describen el momento en que se registró cada evidencia.

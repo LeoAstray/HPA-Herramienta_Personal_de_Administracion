@@ -2,7 +2,7 @@
 
 ## Estado y fecha de consulta
 
-**Investigación documentada el 2026-09-30; DEV-00 seleccionado provisionalmente y demás roles pendientes de piloto.** La disponibilidad real debe comprobarse en el selector de cada cuenta y cliente. Ambos colaboradores tienen Plus y no usarán API de pago ni créditos adicionales.
+**Investigación documentada el 2026-09-30; DEV-00 seleccionado provisionalmente; un caso documental de DEV-01 evaluado satisfactoriamente; demás roles pendientes de ejecución.** La disponibilidad real debe comprobarse en el selector de cada cuenta y cliente. Ambos colaboradores tienen Plus y no usarán API de pago ni créditos adicionales.
 
 ## Evidencia oficial
 
@@ -17,7 +17,7 @@
 | Rol | Configuración inicial | Escalado condicionado | Motivo e hipótesis a comprobar |
 | --- | --- | --- | --- |
 | DEV-00 Preparador de petición | **Selección provisional aprobada:** GPT-6 Luna (`gpt-6-luna`), esfuerzo Low (`low`) | Solo con autorización humana: evaluar Luna Medium si omite ambigüedades materiales | Dos respuestas iniciales satisfactorias; ahorro de consumo no demostrado y prompt revisado pendiente de regresión. |
-| DEV-01 Reviewer | GPT-6.1 Sol Medium | Sol High para seguridad, arquitectura, datos o diffs amplios; GPT-6 Sol equivalente si 6.1 no aparece | La revisión exige más juicio y capacidad para conectar requisitos, código y riesgos. |
+| DEV-01 Reviewer | GPT-6.1 Sol Medium | Sol High para seguridad, arquitectura, datos o diffs amplios; GPT-6 Sol equivalente si 6.1 no aparece | EVAL-01 documental satisfactorio con GPT-6.1 Sol / Medium confirmado por el colaborador; consumo y telemetría no disponibles. Una ejecución no demuestra fiabilidad general ni selección definitiva. |
 | DEV-02 Developer | GPT-6 Luna Medium para cambios pequeños y acotados | GPT-6.1 Sol Medium para cambios coordinados o complejos; GPT-6 Sol Medium si 6.1 no aparece | Empezar con la opción eficiente y escalar cuando la tarea requiera juicio sostenido. |
 | DEV-03 Tester | GPT-6 Luna Medium | Sol Medium cuando haya fallos ambiguos, integración entre módulos o diagnóstico complejo | Casos y comandos claros favorecen Luna; el diagnóstico puede necesitar Sol. |
 | DEV-04 Documentación | GPT-6 Luna Low o Medium | Sol Medium para ADR o cambios transversales | Las ediciones mecánicas son acotadas; las decisiones necesitan más razonamiento. |
