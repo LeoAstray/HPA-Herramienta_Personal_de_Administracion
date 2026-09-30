@@ -2,7 +2,7 @@
 
 ## Estado
 
-**Contrato operativo definido por el equipo; configuración ejecutable pendiente.** DEV-00 tiene una selección provisional aprobada: GPT-6 Luna / Low. Reviewer DEV-01 supera el caso documental EVAL-01 con GPT-6.1 Sol / Medium confirmado por el colaborador, sin selección definitiva ni controles efectivos verificados. EVAL-02 del Developer se ha ejecutado con Luna / Medium y queda pendiente de EVAL-03. Developer DEV-02 tiene una política provisional aprobada: Sol 6.1 / Medium por defecto y Luna / Medium para tareas sencillas y acotadas. Los demás modelos siguen siendo candidatos del piloto; las conexiones siguen pendientes.
+**Contrato operativo definido por el equipo; configuración ejecutable pendiente.** DEV-00 tiene una selección provisional aprobada: GPT-6 Luna / Low. Reviewer DEV-01 supera el caso documental EVAL-01 con GPT-6.1 Sol / Medium confirmado por el colaborador, sin selección definitiva ni controles efectivos verificados. EVAL-02 del Developer, ejecutado con Luna / Medium, queda validado técnicamente por EVAL-03 del Tester con Luna / Medium para este caso documental. EVAL-04 está preparado, no ejecutado; controles efectivos y consumo siguen pendientes. Developer DEV-02 tiene una política provisional aprobada: Sol 6.1 / Medium por defecto y Luna / Medium para tareas sencillas y acotadas. Los demás modelos siguen siendo candidatos del piloto; las conexiones siguen pendientes.
 
 ## Selección de modelo del Developer
 

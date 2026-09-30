@@ -2,7 +2,7 @@
 
 ## Estado y objetivo
 
-**Piloto iniciado: cuatro respuestas manuales de DEV-00, dos ejecuciones de R2 mediante subagentes y respuestas de EVAL-01 y EVAL-02 aportadas. R2 supera los dos casos probados; EVAL-01 supera los criterios documentales de su caso. EVAL-02 satisfactorio en comprobación local del cambio, pendiente de EVAL-03; controles efectivos pendientes.** Comparar configuraciones incluidas en las suscripciones de los dos colaboradores, siguiendo el contrato de [agentes-desarrollo.md](agentes-desarrollo.md). Cuotas y disponibilidad en la segunda cuenta no comprobadas.
+**Piloto iniciado: cuatro respuestas manuales de DEV-00, dos ejecuciones de R2 mediante subagentes y respuestas de EVAL-01, EVAL-02 y EVAL-03 aportadas. R2 supera los dos casos probados; EVAL-01 supera los criterios documentales de su caso. EVAL-02 validado técnicamente por EVAL-03 para el caso documental; EVAL-04 preparado, no ejecutado; controles efectivos pendientes.** Comparar configuraciones incluidas en las suscripciones de los dos colaboradores, siguiendo el contrato de [agentes-desarrollo.md](agentes-desarrollo.md). Cuotas y disponibilidad en la segunda cuenta no comprobadas.
 
 Ambos colaboradores tienen Plus individual. El orden de evaluación es consumo → calidad → autonomía → velocidad; la disponibilidad efectiva de cada configuración debe verificarse.
 
@@ -116,8 +116,39 @@ Fuente: petición y respuesta pegadas por el colaborador, que confirma GPT-6 Lun
 
 El Developer comunica HEAD inicial/final `4739e2141c79e849f5144e7da7a389487baa4bbb`, estado inicial limpio y estado final limitado al índice modificado y CHG-016 nuevo. Declara existencia de destinos, diff limitado a dos sustituciones y `git diff --check` sin incidencias, sin escrituras Git/externas. El agente principal comprueba posteriormente el mismo HEAD, estado final, dos destinos existentes, diff limitado y contenido de CHG-016 con motivo, comprobaciones y validación pendiente. No reconstruye el estado inicial ni todos los accesos realizados por el Developer.
 
-**Resultado:** satisfactorio para esta corrección documental en la comprobación local, pendiente de validación independiente EVAL-03. No se identifica desviación del ámbito en los archivos observados ni se requieren correcciones locales en esta comprobación. Los cambios del Developer se conservan sin editarlos. El registro CHG-016 y la respuesta distinguen comprobaciones propias de validación independiente y aislamiento. No se afirma ausencia demostrada de toda escritura Git/externa ni fiabilidad general para código; consumo no comparable.
+**Resultado inicial:** satisfactorio para esta corrección documental en la comprobación local. La validación independiente posterior EVAL-03 se registra a continuación y valida técnicamente el cambio en su estado examinado. No se identifica desviación del ámbito en los archivos observados ni se requieren correcciones locales en esta comprobación. Los cambios del Developer se conservan sin editarlos. El registro CHG-016 y la respuesta distinguen comprobaciones propias de validación independiente y aislamiento. No se afirma ausencia demostrada de toda escritura Git/externa ni fiabilidad general para código; consumo no comparable.
 
 **Decisión posterior:** el colaborador aprueba provisionalmente Sol 6.1 / Medium como configuración habitual de Developer y Luna / Medium para tareas sencillas y acotadas (ADR-004). Esta decisión no deriva de una comparación de código entre modelos: EVAL-02 solo prueba Luna en documentación; Sol como Developer sigue sin evaluarse.
 
-**Siguiente paso actual:** EVAL-03 con Tester DEV-03, GPT-6 Luna / Medium candidato, sobre el índice y CHG-016 de EVAL-02. Distinguir estos dos archivos de las actualizaciones documentales posteriores de CHG-017 presentes en el árbol. No modificar el índice ni CHG-016 durante la validación. Los demás hallazgos de EVAL-01 siguen pendientes.
+**Siguiente paso tras EVAL-02:** EVAL-03 con Tester DEV-03, GPT-6 Luna / Medium candidato, sobre el índice y CHG-016 de EVAL-02. Distinguir estos dos archivos de las actualizaciones documentales posteriores de CHG-017 presentes en el árbol. No modificar el índice ni CHG-016 durante la validación. Los demás hallazgos de EVAL-01 siguen pendientes.
+
+## Evidencia de EVAL-03 — Tester DEV-03 — 2026-09-30
+
+Fuente: [petición y respuesta completas aportadas](evidencias/eval-03-2026-09-30-peticion-y-respuesta.md). El colaborador confirma GPT-6 Luna / Medium (`gpt-6-luna`, `medium`); no hay telemetría independiente. Una petición y una respuesta aportadas, sin correcciones o reintentos comunicados. Tiempo mostrado: 57 s, hora 23:36; consumo, tamaño total del contexto y versión exacta del cliente no disponibles.
+
+La petición exige validación independiente de los dos archivos de EVAL-02, base `4739e2141c79e849f5144e7da7a389487baa4bbb`, comparación de contenido, destinos, formato, ámbito y estabilidad mediante hashes. Explica las actualizaciones documentales posteriores de CHG-017 y prohíbe editar, crear archivos, escrituras Git/externas o lanzar agentes. Se evalúa un cambio correcto; este caso no demuestra detección de defectos deliberados.
+
+El Tester comunica HEAD inicial/final `cd8356b79d038687540feb7c444b4a386505a59d`, árbol limpio, y hashes iniciales/finales idénticos:
+
+- Índice ADR: `AA874A1C16785AA7609BC582B477184D308886F448417E166D1697BEADA84963`.
+- CHG-016: `A1DA80BA0742E6FF046C9E6EC02410EDBF526A4520A5167BE53322CAE60E5D7B`.
+
+| Caso | Resultado comunicado y evaluación |
+| --- | --- |
+| Destinos | Pasa: ambos históricos y ADR-003/004 existen. |
+| Conservación del índice | Pasa: comparación de diez líneas con la base, aplicando solo dos sustituciones; resto idéntico. |
+| Registro CHG-016 | Pasa: motivo, evidencia, ámbito, comandos y validación pendiente presentes. |
+| Formato y enlaces | Pasa: inspección del registro además del diff; tablas coherentes y enlaces del índice existentes. Reconoce que CHG-016 usa rutas en código, no enlaces Markdown. |
+| Ámbito | Pasa con limitación: separa actualizaciones posteriores del Developer, pero no reconstruye sus acciones ni prueba aislamiento con trazas completas. |
+
+No comunica fallos reproducibles ni aplica correcciones o aprobación de integración. Enumera comandos y resultados compatibles con lectura: Git sin bloqueos opcionales, recuperación del índice base, diff acotado, comparación, hashes y resolución local de enlaces. No ejecuta validadores externos ni pruebas automatizadas y declara esas limitaciones.
+
+El agente principal comprobó posteriormente el mismo HEAD, árbol limpio, ambos hashes, destinos, diff limitado a las dos sustituciones y `git diff --check` del índice contra la base sin errores. Esto contrasta el contenido observado, no reconstruye la estabilidad durante toda la ejecución ni demuestra ausencia de escrituras Git/externas. La respuesta distingue resultado técnico de acciones históricas no verificables; no se detectan conclusiones incorrectas en los cinco casos presentados.
+
+**Resultado:** EVAL-03 satisfactorio para este caso documental. EVAL-02 queda **validado técnicamente en el estado examinado**, sin aprobar integración. No se cambia a selección definitiva el candidato del Tester ni se demuestra fiabilidad general para pruebas de código o ahorro de cuota. Los permisos efectivos, consumo y utilidad frente a plantilla de DEV-00 siguen pendientes.
+
+## Preparación de EVAL-04 — siguiente paso actual
+
+[Entrada sintética S1 preparada](prompts/eval-04-deteccion-sintetica.md), todavía sin ejecutar. Dos chats nuevos independientes y secuenciales: Reviewer DEV-01 con GPT-6.1 Sol / Medium y Tester DEV-03 con GPT-6 Luna / Medium. Misma muestra y fuentes de control; solo cambia el rol. No compartir resultados entre chats ni copiar la clave de corrección en el mensaje.
+
+Se esperan detección de contradicción de permisos, enlace roto y afirmación de consumo sin evidencia, con referencias e impacto; los controles válidos no deben generar falsos positivos. La muestra está incluida en el mensaje, sin introducir errores en la documentación operativa. Registrar resultados por rol, omisiones, falsos positivos y límites. La clave está accesible en el repositorio, por lo que no se garantiza evaluación ciega ni aislamiento técnico. Una detección satisfactoria no cierra por sí sola el piloto global.

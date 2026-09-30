@@ -2,7 +2,7 @@
 
 ## Estado y fecha de consulta
 
-**Investigación documentada el 2026-09-30; DEV-00 y política de modelos de DEV-02 aprobados provisionalmente; EVAL-01 documental satisfactorio; EVAL-02 ejecutado con Luna y pendiente de EVAL-03.** La disponibilidad real debe comprobarse en el selector de cada cuenta y cliente. Ambos colaboradores tienen Plus y no usarán API de pago ni créditos adicionales.
+**Investigación documentada el 2026-09-30; DEV-00 y política de modelos de DEV-02 aprobados provisionalmente; EVAL-01 documental satisfactorio; EVAL-02 con Luna validado técnicamente por EVAL-03 del Tester con Luna / Medium; EVAL-04 preparado, no ejecutado.** La disponibilidad real debe comprobarse en el selector de cada cuenta y cliente. Ambos colaboradores tienen Plus y no usarán API de pago ni créditos adicionales.
 
 ## Evidencia oficial
 
@@ -18,8 +18,8 @@
 | --- | --- | --- | --- |
 | DEV-00 Preparador de petición | **Selección provisional aprobada:** GPT-6 Luna (`gpt-6-luna`), esfuerzo Low (`low`) | Solo con autorización humana: evaluar Luna Medium si omite ambigüedades materiales | Dos respuestas iniciales satisfactorias; ahorro de consumo no demostrado y prompt revisado pendiente de regresión. |
 | DEV-01 Reviewer | GPT-6.1 Sol Medium | Sol High para seguridad, arquitectura, datos o diffs amplios; GPT-6 Sol equivalente si 6.1 no aparece | EVAL-01 documental satisfactorio con GPT-6.1 Sol / Medium confirmado por el colaborador; consumo y telemetría no disponibles. Una ejecución no demuestra fiabilidad general ni selección definitiva. |
-| DEV-02 Developer | **Configuración habitual aprobada provisionalmente:** GPT-6.1 Sol (`gpt-6.1-sol`) / Medium (`medium`) | **Alternativa autorizada por tarea:** GPT-6 Luna (`gpt-6-luna`) / Medium (`medium`) para tareas sencillas y acotadas | Sol para funcionalidades, lógica, refactorizaciones y cambios con dependencias; Luna para enlaces, cambios mecánicos y correcciones pequeñas con criterios claros y bajo riesgo. EVAL-02 documental con Luna pendiente de validación independiente; Sol como Developer aún no evaluado. |
-| DEV-03 Tester | GPT-6 Luna Medium | Sol Medium cuando haya fallos ambiguos, integración entre módulos o diagnóstico complejo | Casos y comandos claros favorecen Luna; el diagnóstico puede necesitar Sol. |
+| DEV-02 Developer | **Configuración habitual aprobada provisionalmente:** GPT-6.1 Sol (`gpt-6.1-sol`) / Medium (`medium`) | **Alternativa autorizada por tarea:** GPT-6 Luna (`gpt-6-luna`) / Medium (`medium`) para tareas sencillas y acotadas | Sol para funcionalidades, lógica, refactorizaciones y cambios con dependencias; Luna para enlaces, cambios mecánicos y correcciones pequeñas con criterios claros y bajo riesgo. EVAL-02 documental con Luna validado técnicamente mediante EVAL-03; Sol como Developer aún no evaluado. |
+| DEV-03 Tester | GPT-6 Luna Medium | Sol Medium cuando haya fallos ambiguos, integración entre módulos o diagnóstico complejo | EVAL-03 satisfactorio para validación documental con Luna / Medium confirmado por el colaborador; 57 s mostrados, consumo y telemetría no disponibles. Pruebas complejas de código aún no evaluadas; el diagnóstico puede necesitar Sol. |
 | DEV-04 Documentación | GPT-6 Luna Low o Medium | Sol Medium para ADR o cambios transversales | Las ediciones mecánicas son acotadas; las decisiones necesitan más razonamiento. |
 | DEV-05 Coordinación | GPT-6 Luna High | Sol Medium para dependencias transversales o planificación incierta | La planificación clara puede resolverse eficientemente; el conflicto de requisitos requiere Sol. |
 

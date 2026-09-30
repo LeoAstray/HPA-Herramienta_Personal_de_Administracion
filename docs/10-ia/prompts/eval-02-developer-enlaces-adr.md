@@ -2,7 +2,7 @@
 
 ## Estado y configuración
 
-**Preparado y ejecutado el 2026-09-30 con GPT-6 Luna / Medium según el colaborador; pendiente de validación EVAL-03.** Se conserva el bloque enviado y su configuración como evidencia del caso sencillo, compatible con la política posterior Sol 6.1 / Medium por defecto y Luna / Medium para tareas sencillas. Encargo acotado a partir del primer hallazgo confirmado de EVAL-01. El colaborador seleccionará GPT-6 Luna (`gpt-6-luna`) / Medium (`medium`) antes de ejecutar. Este Markdown no cambia el modelo ni configura un agente. No sustituir ni escalar sin autorización humana; si la configuración efectiva no es visible, declararla no verificada.
+**Preparado y ejecutado el 2026-09-30 con GPT-6 Luna / Medium según el colaborador; validado técnicamente por EVAL-03 en el estado examinado, sin aprobación de integración.** Se conserva el bloque enviado y su configuración como evidencia del caso sencillo, compatible con la política posterior Sol 6.1 / Medium por defecto y Luna / Medium para tareas sencillas. Encargo acotado a partir del primer hallazgo confirmado de EVAL-01. El colaborador seleccionará GPT-6 Luna (`gpt-6-luna`) / Medium (`medium`) antes de ejecutar. Este Markdown no cambia el modelo ni configura un agente. No sustituir ni escalar sin autorización humana; si la configuración efectiva no es visible, declararla no verificada.
 
 ## Petición para copiar
 
