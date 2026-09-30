@@ -10,7 +10,7 @@
 ## Próximo
 
 1. Ejecutar el descubrimiento y diseño de IA/Agentes: casos de uso, inventario de agentes, criterios de evaluación de modelos y límites de seguridad y privacidad (ADR-003).
-   Para desarrollo, el siguiente entregable es comparar configuraciones incluidas en las suscripciones y ejecutar el piloto documental con los contratos de ADR-004.
+   Para desarrollo, la matriz inicial de modelos está documentada. El siguiente entregable es ejecutar el piloto documental EVAL-00 a EVAL-04 con los contratos de ADR-004.
 2. Resolver las decisiones de dominio que condicionan los agentes internos del producto: primero el contrato de Core y después identidad, permisos y sesiones. La preparación de agentes de desarrollo tiene sus propios contratos y puede avanzar antes.
 3. Diseñar la arquitectura global y el modelo de dominio, incorporando los límites aprobados para IA/Agentes.
 4. Convertir el alcance aprobado en requisitos con identificadores.

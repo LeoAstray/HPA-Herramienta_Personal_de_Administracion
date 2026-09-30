@@ -9,3 +9,5 @@ Leer primero [contexto-agentes.md](contexto-agentes.md) y [contrato-de-agentes.m
 El análisis activo de los dos ámbitos está en [descubrimiento-ia-agentes.md](descubrimiento-ia-agentes.md). La organización operativa de los agentes de desarrollo está en [agentes-desarrollo.md](agentes-desarrollo.md). Ambos documentos contienen propuestas: todavía no hay un modelo o proveedor aprobado.
 
 ADR-004 fija los permisos y preferencias confirmados de desarrollo. Los [escenarios de evaluación](evaluacion-agentes-desarrollo.md) preparan la comparación de configuraciones incluidas en las suscripciones; su ejecución está pendiente.
+
+La [matriz inicial de modelos](matriz-modelos-agentes-desarrollo.md) recoge la investigación oficial vigente y añade DEV-00, un preparador opcional de peticiones. Las asignaciones son candidatas para el piloto, no decisiones definitivas.

@@ -12,6 +12,8 @@ Dos colaboradores con responsabilidades equivalentes desarrollan el repositorio 
 
 Se comparan un flujo con publicación y corrección automáticas, y un flujo iniciado manualmente con permisos por rol. Se adopta el segundo: Developer edita archivos locales y ejecuta comprobaciones breves del cambio; Reviewer y Tester informan; Tester realiza la validación independiente. Las correcciones derivadas de revisión y validación se solicitan al Developer por una persona. Cualquiera de los dos colaboradores puede aprobar resultados.
 
+Se incorpora un Preparador de petición opcional (DEV-00) para encargos ambiguos, complejos o con varios roles. Conserva la petición original, propone una versión mejorada y requiere que un colaborador decida cuál usar. Se omite en tareas claras para reducir consumo.
+
 Los colaboradores gestionan ramas, staging, commits, push, pull requests, merges y publicación manualmente. Los agentes operan localmente y con capacidades incluidas en las suscripciones; queda excluido gasto adicional de API. Issues de GitHub y tareas del proyecto Asana son fuentes deseadas de contexto, con conexiones pendientes.
 
 ## Consecuencias
@@ -22,8 +24,11 @@ La preparación de agentes de desarrollo puede avanzar antes de la arquitectura 
 
 Se aprueban comprobaciones locales breves del Developer dentro del alcance asignado. GitHub queda como fuente de solo lectura para todos los agentes; las escrituras mediante push, API, CLI, conectores o interfaz web están excluidas. La autonomía se optimizará dentro de esos límites y no eliminará las aprobaciones ni las operaciones manuales de Git.
 
+La elección de modelos se mantiene como propuesta hasta completar los escenarios de evaluación. La matriz de investigación se conserva en `docs/10-ia/matriz-modelos-agentes-desarrollo.md`.
+
 ## Referencias
 
 - [Contratos operativos](../10-ia/agentes-desarrollo.md)
 - [Evaluación](../10-ia/evaluacion-agentes-desarrollo.md)
+- [Matriz de modelos](../10-ia/matriz-modelos-agentes-desarrollo.md)
 - [ADR-003](ADR-003-priorizacion-descubrimiento-ia-agentes.md)

@@ -23,6 +23,7 @@ Cada cambio relevante sigue el flujo del proyecto: `Análisis -> Diseño -> Docu
 
 | Rol | Objetivo | Puede hacer | No puede hacer por sí solo |
 | --- | --- | --- | --- |
+| Preparador de petición (DEV-00) | Convertir una petición manual en un encargo claro y verificable para otro agente. | Reordenar el contexto aportado, señalar ambigüedades y proponer objetivo, alcance, restricciones y criterios de aceptación. | Cambiar la intención, ampliar permisos, inventar requisitos, ejecutar la tarea o sustituir la petición original sin mostrar los cambios. |
 | Developer (DEV-01) | Implementar una tarea acotada. | Editar archivos locales asignados, incluido código de pruebas; ejecutar comprobaciones locales breves del cambio y explicar el resultado. | Aprobar su trabajo, modificar el estado Git mediante operaciones de escritura, escribir en GitHub, desplegar o decidir arquitectura. |
 | Reviewer (DEV-02) | Detectar defectos, riesgos y desajustes con la documentación. | Inspeccionar el diff, ejecutar verificaciones de lectura y emitir hallazgos priorizados. | Modificar silenciosamente el cambio revisado o aprobar su propio código. |
 | Tester (DEV-03) | Aportar evidencia de comportamiento y regresiones. | Diseñar casos y ejecutar pruebas en el entorno de prueba, con salidas temporales delimitadas. | Corregir código o pruebas, modificar archivos mantenidos, declarar éxito sin evidencia o desplegar. |
@@ -31,12 +32,30 @@ Cada cambio relevante sigue el flujo del proyecto: `Análisis -> Diseño -> Docu
 
 ## Flujo mínimo por cambio
 
-1. Un colaborador define el objetivo, límites y archivos o módulos previsiblemente afectados.
-2. DEV-01 implementa el cambio en un ámbito exclusivo, ejecuta comprobaciones locales breves y entrega resultados y comprobaciones pendientes al Tester.
-3. DEV-02 revisa de forma independiente un diff estable, con los requisitos y documentos aplicables.
-4. DEV-03 verifica el comportamiento y las regresiones proporcionales al riesgo.
-5. Cualquiera de los dos colaboradores aprueba revisión y pruebas, o solicita expresamente correcciones al Developer. La revisión del otro colaborador es posible, pero no un requisito para cada tarea.
-6. DEV-04 actualiza la trazabilidad cuando el cambio lo requiere.
+1. Un colaborador define la petición manual. Si es ambigua, compleja o activa varios roles, DEV-00 propone una versión mejorada para que el colaborador la acepte o corrija.
+2. El encargo aprobado fija objetivo, límites y archivos o módulos previsiblemente afectados.
+3. DEV-01 implementa el cambio en un ámbito exclusivo, ejecuta comprobaciones locales breves y entrega resultados y comprobaciones pendientes al Tester.
+4. DEV-02 revisa de forma independiente un diff estable, con los requisitos y documentos aplicables.
+5. DEV-03 verifica el comportamiento y las regresiones proporcionales al riesgo.
+6. Cualquiera de los dos colaboradores aprueba revisión y pruebas, o solicita expresamente correcciones al Developer. La revisión del otro colaborador es posible, pero no un requisito para cada tarea.
+7. DEV-04 actualiza la trazabilidad cuando el cambio lo requiere.
+
+## Preparación de peticiones
+
+DEV-00 es opcional porque cada ejecución consume parte de la suscripción. Se activa cuando falten criterios de aceptación, existan varias interpretaciones razonables, haya riesgos o permisos que delimitar, o intervengan varios agentes. Una petición breve, clara y de bajo riesgo pasa directamente al rol correspondiente.
+
+DEV-00 devuelve dos elementos: la petición original intacta y una propuesta mejorada. La propuesta usa, cuando aporten información, estos campos:
+
+- resultado esperado;
+- contexto y fuentes necesarias;
+- alcance y exclusiones;
+- archivos o módulos editables;
+- permisos y acciones prohibidas;
+- criterios de aceptación;
+- comprobaciones esperadas;
+- preguntas que cambiarían materialmente el resultado.
+
+No añadirá requisitos por iniciativa propia. Distinguirá datos confirmados, supuestos propuestos y preguntas. El colaborador elige qué versión se envía al siguiente agente.
 
 ## Reglas de concurrencia
 
@@ -58,6 +77,7 @@ La petición manual indicará objetivo, colaborador responsable, rol, archivos e
 
 | Rol | Salida mínima |
 | --- | --- |
+| Preparador de petición | Petición original, propuesta mejorada, supuestos introducidos y preguntas materiales pendientes. |
 | Developer | Archivos locales cambiados, explicación breve, criterios cubiertos, comandos y resultados de comprobaciones breves y pruebas pendientes para el Tester. |
 | Reviewer | Diff o estado revisado; hallazgos con archivo, ubicación, impacto y evidencia; declaración explícita si no hay hallazgos. |
 | Tester | Estado examinado, comandos y casos ejecutados, resultado esperado y observado, fallos reproducibles y comprobaciones no ejecutadas. |
@@ -94,3 +114,5 @@ Cada tarea debe dejar, en proporción a su riesgo: objetivo, cambios realizados,
 ## Preparación para evaluar modelos
 
 Los modelos se compararán por rol y no como una elección única: capacidad de razonamiento y revisión, calidad de edición de código, fiabilidad de pruebas, coste, latencia, contexto disponible, privacidad, capacidad de usar herramientas y facilidad de sustituirlos. La comparación partirá de tareas representativas y datos sintéticos o autorizados.
+
+La [matriz inicial de modelos](matriz-modelos-agentes-desarrollo.md) contiene candidatos sujetos a disponibilidad en cada cuenta Plus y a los resultados del piloto.

@@ -27,7 +27,7 @@ Crear una aplicación web personal que centralice información cotidiana, docume
 
 Se prioriza el descubrimiento y diseño de IA/Agentes (ADR-003) para identificar casos de uso, agentes necesarios, criterios de evaluación de modelos y límites de datos, permisos y confirmación. Esta prioridad no aprueba un proveedor, modelo, orquestador ni código de producto. La implementación de agentes permanece condicionada por las decisiones transversales de Core e Identidad y Seguridad.
 
-ADR-004 concreta los agentes de desarrollo para dos colaboradores: ejecución manual local en Windows, permisos por rol, operaciones Git humanas y uso exclusivo de las suscripciones. Su evaluación puede avanzar independientemente de Core e Identidad y Seguridad, que son prerrequisitos de los agentes internos del producto. El próximo entregable de desarrollo es investigar configuraciones por rol y ejecutar un piloto documental.
+ADR-004 concreta los agentes de desarrollo para dos colaboradores: ejecución manual local en Windows, permisos por rol, operaciones Git humanas y uso exclusivo de las suscripciones. Su evaluación puede avanzar independientemente de Core e Identidad y Seguridad, que son prerrequisitos de los agentes internos del producto. La investigación inicial de modelos por rol está documentada; el próximo entregable es ejecutar el piloto documental, comenzando por DEV-00.
 
 ## Convención de estado
 

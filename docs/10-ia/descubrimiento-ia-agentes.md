@@ -45,6 +45,7 @@ Esta recomendación es una **propuesta de análisis**, no una decisión de imple
 
 | ID | Agente candidato | Responsabilidad | Alcance inicial | Independencia requerida | Prioridad |
 | --- | --- | --- | --- | --- | --- |
+| DEV-00 | Preparador de petición | Mejorar peticiones complejas o ambiguas antes de asignarlas. | Solo transforma la petición y señala carencias; no ejecuta ni amplía permisos. | El colaborador acepta o corrige la propuesta. | Alta, uso selectivo |
 | DEV-01 | Developer | Implementar cambios aprobados y sus pruebas unitarias. | Rama y archivos asignados; sin despliegues ni servicios externos. | No aprueba su propio cambio. | Alta |
 | DEV-02 | Reviewer | Revisar requisitos, diseño, seguridad, calidad, regresiones y documentación del cambio. | Solo lectura del diff y del contexto necesario; hallazgos accionables. | Debe ser distinto de quien produjo el cambio. | Alta |
 | DEV-03 | Tester | Diseñar casos, ejecutar pruebas, reproducir fallos y comunicar evidencia. | Entorno de pruebas y resultados; no modifica producción. | Puede validar el trabajo de DEV-01. | Alta |
@@ -59,7 +60,7 @@ No se asignarán dos agentes escritores al mismo archivo a la vez. La paraleliza
 
 ## Recomendación inicial para desarrollo
 
-La propuesta es adoptar el flujo **DEV-01 → DEV-02 → DEV-03**, con DEV-04 cuando el cambio sea relevante. Mientras el proyecto siga sin código de producto, estos agentes se aplicarán a documentación, diseño, pruebas de documentación y preparación de la futura implementación; no se simulará una implementación de producción inexistente.
+La propuesta es adoptar **DEV-00 opcional → DEV-01 → DEV-02 → DEV-03**, con DEV-04 cuando el cambio sea relevante. DEV-00 se omite en peticiones ya claras para conservar cuota. Mientras el proyecto siga sin código de producto, estos agentes se aplicarán a documentación, diseño, pruebas de documentación y preparación de la futura implementación; no se simulará una implementación de producción inexistente.
 
 ## Límites para los agentes internos del producto
 

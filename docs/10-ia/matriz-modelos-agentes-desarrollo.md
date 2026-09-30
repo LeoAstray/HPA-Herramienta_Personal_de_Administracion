@@ -1,0 +1,41 @@
+# Matriz inicial de modelos para agentes de desarrollo
+
+## Estado y fecha de consulta
+
+**Investigación documentada el 2026-09-30; decisión pendiente de piloto.** La disponibilidad real debe comprobarse en el selector de cada cuenta y cliente. Ambos colaboradores tienen Plus y no usarán API de pago ni créditos adicionales.
+
+## Evidencia oficial
+
+- [Modelos de ChatGPT Work y Codex](https://learn.chatgpt.com/docs/models): GPT-6.1 Sol se está desplegando para Plus y se recomienda para flujos complejos de programación; Luna se orienta a tareas claras, repetibles y frecuentes. El esfuerzo de razonamiento mayor consume más tokens y tarda más.
+- [Precios y planes](https://learn.chatgpt.com/docs/pricing): Plus incluye Codex y GPT-6 Sol/Luna. El consumo depende del modelo, del tamaño y complejidad de la tarea y de si se ejecuta localmente o en la nube; la documentación no proporciona una equivalencia fija por tarea.
+- [Selección de modelos](https://developers.openai.com/api/docs/guides/model-selection): Luna es la opción eficiente para trabajo acotado; GPT-6.1 Sol equilibra capacidad y coste para trabajo técnico complejo. OpenAI recomienda comparar las mismas entradas y conservar la configuración más ligera que alcance el nivel de calidad requerido.
+- [Prácticas de prompts y skills](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra): las instrucciones excesivas y lecturas obligatorias innecesarias consumen contexto; conviene aplicar instrucciones específicas al trabajo y mantener descripciones de skills breves.
+- [Evaluación de skills](https://developers.openai.com/blog/eval-skills): una evaluación útil mide resultado, proceso, estilo y eficiencia con un conjunto pequeño de casos y controles deterministas.
+
+## Candidatos por rol
+
+| Rol | Configuración inicial | Escalado condicionado | Motivo e hipótesis a comprobar |
+| --- | --- | --- | --- |
+| DEV-00 Preparador de petición | GPT-6 Luna, esfuerzo Low | Luna Medium si omite ambigüedades materiales | Transformación breve y estructurada. Debe ahorrar más rondas de las que consume. |
+| DEV-01 Developer | GPT-6 Luna Medium para cambios pequeños y acotados | GPT-6.1 Sol Medium para cambios coordinados o complejos; GPT-6 Sol Medium si 6.1 no aparece | Empezar con la opción eficiente y escalar cuando la tarea requiera juicio sostenido. |
+| DEV-02 Reviewer | GPT-6.1 Sol Medium | Sol High para seguridad, arquitectura, datos o diffs amplios; GPT-6 Sol equivalente si 6.1 no aparece | La revisión exige más juicio y capacidad para conectar requisitos, código y riesgos. |
+| DEV-03 Tester | GPT-6 Luna Medium | Sol Medium cuando haya fallos ambiguos, integración entre módulos o diagnóstico complejo | Casos y comandos claros favorecen Luna; el diagnóstico puede necesitar Sol. |
+| DEV-04 Documentación | GPT-6 Luna Low o Medium | Sol Medium para ADR o cambios transversales | Las ediciones mecánicas son acotadas; las decisiones necesitan más razonamiento. |
+| DEV-05 Coordinación | GPT-6 Luna High | Sol Medium para dependencias transversales o planificación incierta | La planificación clara puede resolverse eficientemente; el conflicto de requisitos requiere Sol. |
+
+Estas configuraciones son puntos de partida, no una afirmación sobre el consumo exacto de Plus. GPT-6.1 Sol está sujeto al despliegue y al cliente; el piloto registrará el modelo que realmente aparezca y se use. Astra no entra en la primera comparación porque Plus documenta Sol y Luna como opciones incluidas y el equipo prioriza cuota.
+
+## Política de selección por tarea
+
+1. Omitir DEV-00 cuando la petición ya contenga objetivo, alcance, permisos y criterio de aceptación suficientes.
+2. Empezar con Luna para transformaciones, comprobaciones y cambios claramente acotados.
+3. Usar Sol desde el inicio para revisiones de riesgo alto o cambios que conecten varias áreas.
+4. Escalar una sola vez cuando el resultado no alcance un criterio concreto; registrar el motivo.
+5. No repetir una tarea completa solo para comparar modelos salvo que forme parte del piloto acordado.
+6. No usar Max ni Ultra en el piloto inicial. La documentación oficial indica que la mayoría de tareas no los necesita y Ultra usa subagentes.
+
+## Medición dentro de Plus
+
+La cuota de Plus no ofrece una conversión pública estable de tarea a tokens o mensajes. Para cada ejecución se registrará el indicador de uso disponible en el cliente, modelo, esfuerzo, tamaño aproximado del contexto, número de rondas, resultado y correcciones humanas. Si el consumo por tarea no puede aislarse, se marcará como no comparable.
+
+La decisión final favorecerá primero el menor consumo observado entre configuraciones que cumplan todos los criterios, después calidad, autonomía dentro de permisos y velocidad.
