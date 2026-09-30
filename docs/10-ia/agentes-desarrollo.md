@@ -2,7 +2,7 @@
 
 ## Estado
 
-**Contrato operativo definido por el equipo; configuración pendiente.** Las restricciones y preferencias siguientes proceden de las respuestas del propietario. Los modelos, la plataforma de ejecución y las conexiones aún deben investigarse.
+**Contrato operativo definido por el equipo; configuración ejecutable pendiente.** DEV-00 tiene una selección provisional aprobada: GPT-6 Luna / Low. Los demás modelos siguen siendo candidatos del piloto; las conexiones siguen pendientes.
 
 ## Entorno y prioridades confirmados
 
@@ -56,6 +56,10 @@ DEV-00 devuelve dos elementos: la petición original intacta y una propuesta mej
 - preguntas que cambiarían materialmente el resultado.
 
 No añadirá requisitos por iniciativa propia. Distinguirá datos confirmados, supuestos propuestos y preguntas. El colaborador elige qué versión se envía al siguiente agente.
+
+**Configuración provisional de DEV-00:** GPT-6 Luna (`gpt-6-luna`) con esfuerzo Low (`low`), aprobada el 2026-09-30 tras dos respuestas iniciales satisfactorias de EVAL-00. La selección se hace antes de la ejecución en el cliente; el [prompt manual](prompts/dev-00-preparar-peticion.md) no cambia el modelo ni configura un agente ejecutable. No escalar ni sustituirlo sin autorización del colaborador. Si la configuración efectiva no es visible, declararla no verificada.
+
+La salida distingue **lista para aprobación del colaborador** de **pendiente de aclaración**. Las preguntas materiales y las propuestas de alcance o permisos sin confirmar impiden presentar el encargo como listo para ejecución. DEV-00 no envía el encargo ni activa el siguiente rol.
 
 ## Reglas de concurrencia
 
@@ -115,4 +119,4 @@ Cada tarea debe dejar, en proporción a su riesgo: objetivo, cambios realizados,
 
 Los modelos se compararán por rol y no como una elección única: capacidad de razonamiento y revisión, calidad de edición de código, fiabilidad de pruebas, coste, latencia, contexto disponible, privacidad, capacidad de usar herramientas y facilidad de sustituirlos. La comparación partirá de tareas representativas y datos sintéticos o autorizados.
 
-La [matriz inicial de modelos](matriz-modelos-agentes-desarrollo.md) contiene candidatos sujetos a disponibilidad en cada cuenta Plus y a los resultados del piloto.
+La [matriz inicial de modelos](matriz-modelos-agentes-desarrollo.md) contiene la selección provisional de DEV-00 y los candidatos de los demás roles, sujetos a disponibilidad en cada cuenta Plus y a los resultados del piloto.

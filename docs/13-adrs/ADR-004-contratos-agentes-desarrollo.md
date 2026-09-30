@@ -2,7 +2,7 @@
 
 ## Estado y fecha
 
-**Decisión de organización y permisos**, basada en las respuestas del propietario del 2026-09-28. Configuración de herramientas y selección de modelos pendientes.
+**Decisión de organización y permisos**, basada en las respuestas del propietario del 2026-09-28. Actualizada el 2026-09-30 con la selección provisional de DEV-00. Configuración ejecutable y selección de los demás modelos pendientes.
 
 ## Contexto
 
@@ -24,7 +24,9 @@ La preparación de agentes de desarrollo puede avanzar antes de la arquitectura 
 
 Se aprueban comprobaciones locales breves del Developer dentro del alcance asignado. GitHub queda como fuente de solo lectura para todos los agentes; las escrituras mediante push, API, CLI, conectores o interfaz web están excluidas. La autonomía se optimizará dentro de esos límites y no eliminará las aprobaciones ni las operaciones manuales de Git.
 
-La elección de modelos se mantiene como propuesta hasta completar los escenarios de evaluación. La matriz de investigación se conserva en `docs/10-ia/matriz-modelos-agentes-desarrollo.md`.
+El 2026-09-30 el colaborador aprueba mantener provisionalmente GPT-6 Luna (`gpt-6-luna`) con esfuerzo Low (`low`) para DEV-00, tras aportar dos respuestas satisfactorias de EVAL-00. Esta evidencia no demuestra ahorro de cuota ni verificación de operaciones realizadas. La revisión posterior del prompt requiere una comprobación de regresión. No se permite escalado automático; una alternativa requiere autorización humana.
+
+La selección se aplica manualmente antes de ejecutar DEV-00; los documentos no cambian el modelo del chat. La configuración ejecutable sigue pendiente. Los demás modelos se mantienen como propuestas hasta evaluar sus escenarios. La matriz se conserva en `docs/10-ia/matriz-modelos-agentes-desarrollo.md`.
 
 ## Referencias
 

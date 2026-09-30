@@ -2,7 +2,7 @@
 
 ## Estado y objetivo
 
-**Diseño de piloto; ejecución pendiente.** Comparar configuraciones incluidas en las suscripciones de los dos colaboradores, siguiendo el contrato de [agentes-desarrollo.md](agentes-desarrollo.md). Modelos y cuotas disponibles todavía no están comprobados.
+**Piloto iniciado: dos respuestas de EVAL-00 aportadas por el colaborador; restantes escenarios pendientes.** Comparar configuraciones incluidas en las suscripciones de los dos colaboradores, siguiendo el contrato de [agentes-desarrollo.md](agentes-desarrollo.md). GPT-6 Luna / Low fue usado según el colaborador; cuotas y disponibilidad en la segunda cuenta no comprobadas.
 
 Ambos colaboradores tienen Plus individual. El orden de evaluación es consumo → calidad → autonomía → velocidad; la disponibilidad efectiva de cada configuración debe verificarse.
 
@@ -40,4 +40,17 @@ Probar inicialmente una tarea pequeña por rol. Repetir o ampliar solo cuando ex
 
 DEV-00 se conserva solo si reduce repeticiones o errores más de lo que aumenta el consumo. También se comparará con una plantilla rellenada directamente por el colaborador, que no requiere una ejecución adicional.
 
-El prompt experimental de EVAL-00 se mantiene en [prompts/dev-00-preparar-peticion.md](prompts/dev-00-preparar-peticion.md). Su redacción podrá cambiar a partir de los resultados; todavía no es una skill ni una configuración definitiva.
+El prompt manual de EVAL-00 se mantiene en [prompts/dev-00-preparar-peticion.md](prompts/dev-00-preparar-peticion.md). Su redacción podrá cambiar a partir de los resultados; todavía no es una skill ni una configuración ejecutable.
+
+## Evidencia inicial de EVAL-00 — 2026-09-30
+
+Fuente: peticiones y respuestas copiadas por el colaborador en la conversación, quien declara GPT-6 Luna / Low en ambos casos. No se dispone de trazas de herramientas, consumo atribuible, commit exacto de la ejecución ni comprobación independiente de lecturas o ausencia de escrituras. Se evaluó la versión anterior del prompt, no la revisión posterior de este cambio.
+
+| Caso | Petición original | Resultado observado en la respuesta | Tiempo comunicado | Evaluación |
+| --- | --- | --- | --- | --- |
+| Claro | Revisar en solo lectura `docs/10-ia/agentes-desarrollo.md` y `docs/13-adrs/ADR-004-contratos-agentes-desarrollo.md`; comparar permisos de Developer, Reviewer y Tester, informando solo contradicciones verificables con ubicación e impacto; sin editar ni escribir en Git/GitHub. | Recomendó usar la original, sin ampliarla, introducir supuestos ni preguntar innecesariamente. No presentó una revisión ejecutada. | 10 s | Satisfactorio para contención. |
+| Ambiguo | «Mejora la documentación de nuestros agentes para que todos tengan claros sus permisos y podamos trabajar con menos intervención. No hagas commits ni subas cambios.» | Preguntó si el ámbito era desarrollo o producto; conservó aprobaciones y Git humano; etiquetó alcance, archivos y permisos como propuestas. | 23 s | Satisfactorio con observación menor: indicar explícitamente que la propuesta está pendiente de aclaración y no lista para ejecución. |
+
+**Decisión provisional:** mantener GPT-6 Luna / Low para DEV-00, aprobada por el colaborador. Dos casos no demuestran fiabilidad general, ahorro de cuota ni utilidad frente a una plantilla manual. Consumo: no disponible. Los tiempos no sustituyen consumo.
+
+**Pendiente:** comprobar los dos casos con el prompt revisado (contexto rector, configuración explícita y estado listo/pendiente), verificar controles efectivos de lectura y escritura, y continuar EVAL-01. No atribuir a esta revisión las pruebas de la versión anterior.
