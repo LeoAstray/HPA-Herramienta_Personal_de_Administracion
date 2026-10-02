@@ -2,7 +2,7 @@
 
 ## Estado y objetivo
 
-**Piloto iniciado: cuatro respuestas manuales de DEV-00, dos ejecuciones de R2 mediante subagentes y respuestas de EVAL-01, EVAL-02 y EVAL-03 aportadas. R2 supera los dos casos probados; EVAL-01 supera los criterios documentales de su caso. EVAL-02 validado técnicamente por EVAL-03 para el caso documental; EVAL-04 preparado, no ejecutado; controles efectivos pendientes.** Comparar configuraciones incluidas en las suscripciones de los dos colaboradores, siguiendo el contrato de [agentes-desarrollo.md](agentes-desarrollo.md). Cuotas y disponibilidad en la segunda cuenta no comprobadas.
+**Piloto documental en curso: R2 de DEV-00 y EVAL-01 satisfactorios en sus casos; EVAL-02 validado técnicamente por EVAL-03. EVAL-04 registrado el 2026-10-03: Reviewer satisfactorio; primera ejecución del Tester con incidencia de protocolo; repetición satisfactoria en detección, con observaciones de presentación y entrada ajustada. Controles efectivos, consumo atribuible y configuración ejecutable pendientes.** Comparar configuraciones incluidas en las suscripciones de los dos colaboradores, siguiendo el contrato de [agentes-desarrollo.md](agentes-desarrollo.md). Cuotas y disponibilidad en la segunda cuenta no comprobadas.
 
 Ambos colaboradores tienen Plus individual. El orden de evaluación es consumo → calidad → autonomía → velocidad; la disponibilidad efectiva de cada configuración debe verificarse.
 
@@ -147,8 +147,54 @@ El agente principal comprobó posteriormente el mismo HEAD, árbol limpio, ambos
 
 **Resultado:** EVAL-03 satisfactorio para este caso documental. EVAL-02 queda **validado técnicamente en el estado examinado**, sin aprobar integración. No se cambia a selección definitiva el candidato del Tester ni se demuestra fiabilidad general para pruebas de código o ahorro de cuota. Los permisos efectivos, consumo y utilidad frente a plantilla de DEV-00 siguen pendientes.
 
-## Preparación de EVAL-04 — siguiente paso actual
+## Preparación de EVAL-04 — estado histórico del 2026-09-30
 
 [Entrada sintética S1 preparada](prompts/eval-04-deteccion-sintetica.md), todavía sin ejecutar. Dos chats nuevos independientes y secuenciales: Reviewer DEV-01 con GPT-6.1 Sol / Medium y Tester DEV-03 con GPT-6 Luna / Medium. Misma muestra y fuentes de control; solo cambia el rol. No compartir resultados entre chats ni copiar la clave de corrección en el mensaje.
 
 Se esperan detección de contradicción de permisos, enlace roto y afirmación de consumo sin evidencia, con referencias e impacto; los controles válidos no deben generar falsos positivos. La muestra está incluida en el mensaje, sin introducir errores en la documentación operativa. Registrar resultados por rol, omisiones, falsos positivos y límites. La clave está accesible en el repositorio, por lo que no se garantiza evaluación ciega ni aislamiento técnico. Una detección satisfactoria no cierra por sí sola el piloto global.
+
+## Evidencia de EVAL-04 — registrada el 2026-10-03
+
+**Fuente:** tres peticiones y respuestas aportadas por el colaborador, conservadas completas, incluidas las etiquetas de interfaz:
+
+- [Reviewer DEV-01](evidencias/eval-04-2026-10-03-reviewer-peticion-y-respuesta.md).
+- [Tester DEV-03, primera ejecución](evidencias/eval-04-2026-10-03-tester-primera-peticion-y-respuesta.md).
+- [Tester DEV-03, repetición](evidencias/eval-04-2026-10-03-tester-repeticion-peticion-y-respuesta.md).
+
+La fecha es la del registro en este chat; las transcripciones no incluyen una fecha ni zona horaria que permitan confirmar el día exacto de ejecución. El colaborador confirma GPT-6.1 Sol / Medium para Reviewer y sitúa las ejecuciones del Tester en la continuidad del encargo GPT-6 Luna / Medium. La configuración del Tester se atribuye a ese contexto comunicado, sin confirmación individual adicional en las transcripciones. No hay telemetría independiente del modelo o esfuerzo, versión exacta del cliente, tamaño total del contexto ni consumo atribuible. Una aportación anterior con `[ROL]` sin sustituir fue reemplazada por la transcripción identificada como Reviewer; no se cuenta como ejecución de un rol en esta comparación.
+
+Las tres respuestas identifican versión S1 y HEAD inicial/final `06689607869f722d5c69284c9c99a6f88b71deb6`, con árbol limpio comunicado en ambos extremos. Antes de registrar, el agente principal observó el mismo HEAD y árbol limpio, confirmó las cláusulas citadas y obtuvo `False` para el destino ficticio. Esto contrasta las fuentes actuales; no reconstruye las acciones o la estabilidad durante las ejecuciones.
+
+| Ejecución | Entrada y tiempo mostrado | Resultado observado | Evaluación |
+| --- | --- | --- | --- |
+| EVAL04-REV1, Reviewer | Bloque original con rol sustituido; 45 s, hora 1:23. | Detecta L2, L3 y L4 con evidencia e impacto; acepta L1, L5 y L6. Distingue proporción no verificable de falsedad. Comunica comandos y límites sin aprobar integración. | Satisfactorio para este caso según la evidencia aportada. |
+| EVAL04-TST1, Tester | Mismo bloque con rol sustituido; 29 s, hora 1:27. | Detecta los tres defectos y conserva los controles, pero declara leer el registro de evaluación, que contiene criterios esperados. Confunde DEV-03 con DEV-02 al describir permisos del Developer y desarrolla poco los impactos. | Detección correcta; cumplimiento parcial del encargo. Incidencia de protocolo por acceso comunicado a criterios del evaluador. |
+| EVAL04-TST2, Tester | Misma muestra S1 y bloque, con exclusión explícita añadida de archivos con criterios o resultados; 22 s, hora 1:32. | Detecta los tres defectos sin falsos positivos, usa DEV-02 correctamente y declara no leer documentos excluidos. Persisten impactos poco desarrollados y una celda incoherente en el caso L6. | Satisfactorio en detección; entrega con observaciones de presentación. La declaración de lecturas no acredita aislamiento técnico. |
+
+### Contraste de contenido y límites de la entrega
+
+| Elemento | Resultado esperado y observado |
+| --- | --- |
+| L2 | Las tres respuestas detectan la contradicción con operaciones Git humanas y GitHub de solo lectura. El impacto exigido es la ampliación indebida de permisos y posible publicación no autorizada; Reviewer lo explicita, Tester se centra en la contradicción. |
+| L3 | Las tres comunican `Test-Path` con resultado `False`. El destino no existe en la comprobación posterior; Reviewer explica la imposibilidad de consultar la política citada. Tester identifica que el enlace no resuelve. |
+| L4 | Las tres reconocen que no se demuestra la proporción del 50 % ni el ahorro, sin afirmar que la proporción sea numéricamente falsa. Reviewer explica el sesgo posible en la elección de modelo; Tester no desarrolla ese impacto. |
+| L1, L5, L6 | Las tres aceptan los controles válidos: no se observan falsos positivos ni omisiones de los tres defectos esperados. En TST2, el esperado de la tabla L6 afirma que Git basta para demostrar ausencia de escrituras, mientras el observado lo niega y marca «Pasa». El hallazgo y la conclusión sí conservan el límite correcto; se registra una incoherencia de presentación. |
+
+El documento leído por TST1 tenía SHA-256 `ADD2EBEC8CC5799E31E2A3CAA342FF6CE92038F8235B1D1767597F1926E3B108`, coincidente con la comprobación local anterior a este registro. Su sección de preparación, línea 154 en esa versión, enumera los tres defectos esperados y los controles. Declarar no haber consultado claves no resuelve el acceso comunicado a ese contenido. No se puede determinar cuánto influyó en su respuesta.
+
+Tras esa incidencia, el colaborador realizó una segunda ejecución del Tester con la precisión: «No abras docs/10-ia/evaluacion-agentes-desarrollo.md, docs/10-ia/prompts/eval-04-deteccion-sintetica.md ni transcripciones de EVAL-04: contienen resultados o criterios del evaluador». Se conserva el añadido en su transcripción y el bloque original en el encargo. Reviewer y TST1 reciben entradas equivalentes salvo el rol; TST2 recibe una entrada ajustada. No se presenta esta repetición como una comparación con entradas idénticas ni se elimina la primera ejecución del historial.
+
+Reviewer aporta una ronda. Tester aporta dos rondas, con intervención humana para repetir y precisar lecturas. No consta el tiempo total hasta la aceptación, incluidos análisis e intervención; los 45/29/22 s son tiempos mostrados por la interfaz, no medidas independientes ni equivalencias de consumo. No se declara ganador por coste o velocidad entre roles diferentes.
+
+### Evidencia de proceso y resultado
+
+Las respuestas enumeran Git de lectura con `--no-optional-locks`, lecturas Markdown y comprobación del destino inexistente. Reviewer añade búsquedas y diff local; TST1 comunica lectura del registro y matriz, además del hash del registro. Ambas ejecuciones del Tester intentan leer `docs/14-cambios/README.md`, inexistente, y reconocen que no lo usan como evidencia; es una lectura innecesaria, no otro defecto de S1. Las transcripciones conservan los comandos y resultados comunicados, no sus trazas completas. No se afirma verificación independiente de todos los accesos, de ausencia de escrituras Git/externas ni de imposición de permisos. La independencia de chats y la ausencia de intercambio de respuestas no cuentan con trazas independientes. Las fuentes rectoras contienen menciones al piloto y la clave sigue accesible en el repositorio: no se garantiza evaluación ciega.
+
+**Resultado registrado:** Reviewer satisfactorio para EVAL-04; Tester con detección correcta en ambas ejecuciones, incidencia de protocolo en la primera y repetición satisfactoria en detección con observaciones de entrega. No se exige otra repetición automática por esas observaciones. Se mantienen los candidatos de Reviewer y Tester; no se aprueba selección definitiva, integración, código de producto ni cierre del piloto global.
+
+## Pendientes y siguiente trabajo propuesto
+
+- **Pendiente:** controles efectivos de lectura y escritura, trazas de acciones y configuración ejecutable compartida. La incidencia de TST1 confirma que una instrucción documental por sí sola no garantiza exclusión de fuentes.
+- **Pendiente:** consumo atribuible por tarea aceptada y utilidad de DEV-00 frente a una plantilla; capacidad de Sol como Developer y pruebas de código complejas sin evaluar.
+- **Pendiente:** actualización del estado histórico del prompt DEV-00 identificada en EVAL-01. CHG-019 actualiza el README de IA para reflejar contratos y resultados actuales.
+- **Propuesta de siguiente trabajo:** definir un encargo acotado para comprobar controles de permisos en un entorno local desechable, con evidencia de acciones y sin acceso al remoto real ni datos personales. Su diseño y ejecución siguen pendientes de encargo; este registro no crea una configuración ni lanza agentes.

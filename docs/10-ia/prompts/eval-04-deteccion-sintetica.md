@@ -2,14 +2,16 @@
 
 ## Estado y configuración
 
-**Preparado el 2026-09-30; no ejecutado.** El contenido del bloque es una muestra ficticia para evaluación; no representa decisiones ni estado operativo del proyecto.
+**Preparado el 2026-09-30; ejecuciones aportadas y registradas el 2026-10-03.** Reviewer satisfactorio; primera ejecución del Tester con incidencia de acceso a criterios y repetición satisfactoria en detección con observaciones de presentación. Véase el [registro de resultados](../evaluacion-agentes-desarrollo.md). El contenido del bloque es una muestra ficticia para evaluación; no representa decisiones ni estado operativo del proyecto.
 
-Ejecutar secuencialmente en dos chats nuevos e independientes:
+Configuración del encargo original, conservada como referencia histórica:
 
 1. Reviewer DEV-01: GPT-6.1 Sol (`gpt-6.1-sol`) / Medium (`medium`).
 2. Tester DEV-03: GPT-6 Luna (`gpt-6-luna`) / Medium (`medium`).
 
 Copiar solo el bloque siguiente y sustituir `[ROL]` por `Reviewer (DEV-01)` o `Tester (DEV-03)`. Mantener el resto de la entrada idéntico. No compartir la respuesta del primer rol con el segundo ni copiar los criterios de corrección externos al bloque. Seleccionar el modelo y esfuerzo antes de ejecutar; no escalar ni sustituir automáticamente. No ejecutar otros roles ni corregir archivos.
+
+Estas eran las instrucciones del encargo original. Las respuestas aportadas y la repetición del Tester se conservan en el registro; no se requiere otra ejecución automática. El bloque siguiente permanece intacto para poder contrastar qué se envió.
 
 ## Petición para copiar
 
@@ -69,6 +71,16 @@ Entrega:
 No inventes problemas ni afirmes haber verificado acciones sin trazas.
 Si algún dato necesario no está disponible, decláralo.
 ```
+
+## Precisión añadida en la repetición del Tester
+
+El colaborador añadió al final del bloque la siguiente instrucción, tras la lectura de criterios comunicada en la primera ejecución. Se registra por separado para conservar la entrada original:
+
+```text
+No abras docs/10-ia/evaluacion-agentes-desarrollo.md, docs/10-ia/prompts/eval-04-deteccion-sintetica.md ni transcripciones de EVAL-04: contienen resultados o criterios del evaluador.
+```
+
+La muestra sigue siendo S1, pero esta entrada ajustada no es idéntica a la recibida por Reviewer ni por el primer Tester. No constituye una restricción técnica de acceso. La transcripción de la repetición conserva el añadido tal como se aportó; ninguna respuesta se corrige retrospectivamente.
 
 ## Corrección por el evaluador — no copiar al chat de prueba
 
