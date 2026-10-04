@@ -2,7 +2,11 @@
 
 ## Estado
 
-**Contrato operativo definido por el equipo; configuración pendiente.** Las restricciones y preferencias siguientes proceden de las respuestas del propietario. Los modelos, la plataforma de ejecución y las conexiones aún deben investigarse.
+**Contrato operativo definido por el equipo; configuración ejecutable pendiente.** DEV-00 tiene una selección provisional aprobada: GPT-6 Luna / Low. Reviewer DEV-01 supera los casos documentales EVAL-01 y EVAL-04 con GPT-6.1 Sol / Medium confirmado por el colaborador, sin selección definitiva ni controles efectivos verificados. EVAL-02 del Developer, ejecutado con Luna / Medium, queda validado técnicamente por EVAL-03 del Tester con Luna / Medium para este caso documental. EVAL-04 del Tester se registra con incidencia de protocolo en la primera ejecución y repetición satisfactoria en detección, con observaciones de presentación y entrada ajustada; Luna / Medium consta por el contexto comunicado del encargo, sin telemetría independiente. El [registro de evaluación](evaluacion-agentes-desarrollo.md) conserva las tres respuestas y sus límites. Controles efectivos, consumo y piloto global siguen pendientes. Developer DEV-02 tiene una política provisional aprobada: Sol 6.1 / Medium por defecto y Luna / Medium para tareas sencillas y acotadas. Los demás modelos siguen siendo candidatos del piloto; las conexiones siguen pendientes.
+
+## Selección de modelo del Developer
+
+**Decisión provisional del colaborador, 2026-09-30:** usar GPT-6.1 Sol (gpt-6.1-sol) / Medium (medium) como opción habitual de DEV-02. Para tareas sencillas y acotadas se autoriza GPT-6 Luna (gpt-6-luna) / Medium (medium). Sol se prioriza para funcionalidades, lógica, refactorizaciones y cambios con dependencias; Luna puede seleccionarse para enlaces, cambios mecánicos y correcciones pequeñas con criterios claros y bajo riesgo. La configuración se selecciona antes de ejecutar y se registra por tarea. Cambiarla durante la ejecución o sustituirla por otra no disponible requiere autorización humana. Los Markdown no cambian el modelo del cliente. El resultado documental de EVAL-02 no demuestra capacidad para código ni constituye una evaluación de Sol como Developer.
 
 ## Entorno y prioridades confirmados
 
@@ -23,20 +27,47 @@ Cada cambio relevante sigue el flujo del proyecto: `Análisis -> Diseño -> Docu
 
 | Rol | Objetivo | Puede hacer | No puede hacer por sí solo |
 | --- | --- | --- | --- |
-| Developer (DEV-01) | Implementar una tarea acotada. | Editar archivos locales asignados, incluido código de pruebas; ejecutar comprobaciones locales breves del cambio y explicar el resultado. | Aprobar su trabajo, modificar el estado Git mediante operaciones de escritura, escribir en GitHub, desplegar o decidir arquitectura. |
-| Reviewer (DEV-02) | Detectar defectos, riesgos y desajustes con la documentación. | Inspeccionar el diff, ejecutar verificaciones de lectura y emitir hallazgos priorizados. | Modificar silenciosamente el cambio revisado o aprobar su propio código. |
+| Preparador de petición (DEV-00) | Convertir una petición manual en un encargo claro y verificable para otro agente. | Reordenar el contexto aportado, señalar ambigüedades y proponer objetivo, alcance, restricciones y criterios de aceptación. | Cambiar la intención, ampliar permisos, inventar requisitos, ejecutar la tarea o sustituir la petición original sin mostrar los cambios. |
+| Reviewer (DEV-01) | Detectar defectos, riesgos y desajustes con la documentación. | Inspeccionar el diff, ejecutar verificaciones de lectura y emitir hallazgos priorizados. | Modificar silenciosamente el cambio revisado o aprobar su propio código. |
+| Developer (DEV-02) | Implementar una tarea acotada. | Editar archivos locales asignados, incluido código de pruebas; ejecutar comprobaciones locales breves del cambio y explicar el resultado. | Aprobar su trabajo, modificar el estado Git mediante operaciones de escritura, escribir en GitHub, desplegar o decidir arquitectura. |
 | Tester (DEV-03) | Aportar evidencia de comportamiento y regresiones. | Diseñar casos y ejecutar pruebas en el entorno de prueba, con salidas temporales delimitadas. | Corregir código o pruebas, modificar archivos mantenidos, declarar éxito sin evidencia o desplegar. |
 | Documentación (DEV-04) | Mantener trazabilidad y documentación. | Proponer cambios; editar documentos si la tarea manual lo asigna expresamente. | Convertir una propuesta en decisión o modificar el estado Git. |
 | Coordinación (DEV-05) | Preparar el trabajo paralelo. | Proponer descomposición, dependencias y orden. | Gestionar servicios externos, publicar o crear tareas externas sin autorización. |
 
+La numeración sigue el orden del piloto documental: DEV-00 Preparador → DEV-01 Reviewer → DEV-02 Developer → DEV-03 Tester. Los identificadores designan roles; el flujo habitual de un cambio sigue siendo Developer → Reviewer → Tester. DEV-04 y DEV-05 conservan sus identificadores.
+
 ## Flujo mínimo por cambio
 
-1. Un colaborador define el objetivo, límites y archivos o módulos previsiblemente afectados.
-2. DEV-01 implementa el cambio en un ámbito exclusivo, ejecuta comprobaciones locales breves y entrega resultados y comprobaciones pendientes al Tester.
-3. DEV-02 revisa de forma independiente un diff estable, con los requisitos y documentos aplicables.
-4. DEV-03 verifica el comportamiento y las regresiones proporcionales al riesgo.
-5. Cualquiera de los dos colaboradores aprueba revisión y pruebas, o solicita expresamente correcciones al Developer. La revisión del otro colaborador es posible, pero no un requisito para cada tarea.
-6. DEV-04 actualiza la trazabilidad cuando el cambio lo requiere.
+1. Un colaborador define la petición manual. Si es ambigua, compleja o activa varios roles, DEV-00 propone una versión mejorada para que el colaborador la acepte o corrija.
+2. El encargo aprobado fija objetivo, límites y archivos o módulos previsiblemente afectados.
+3. DEV-02 implementa el cambio en un ámbito exclusivo, ejecuta comprobaciones locales breves y entrega resultados y comprobaciones pendientes al Tester.
+4. DEV-01 revisa de forma independiente un diff estable, con los requisitos y documentos aplicables.
+5. DEV-03 verifica el comportamiento y las regresiones proporcionales al riesgo.
+6. Cualquiera de los dos colaboradores aprueba revisión y pruebas, o solicita expresamente correcciones al Developer. La revisión del otro colaborador es posible, pero no un requisito para cada tarea.
+7. DEV-04 actualiza la trazabilidad cuando el cambio lo requiere.
+
+## Preparación de peticiones
+
+DEV-00 es opcional porque cada ejecución consume parte de la suscripción. Se activa cuando falten criterios de aceptación, existan varias interpretaciones razonables, haya riesgos o permisos que delimitar, o intervengan varios agentes. Una petición breve, clara y de bajo riesgo pasa directamente al rol correspondiente.
+
+Si se invoca DEV-00 con una petición suficiente, devuelve la original intacta y recomienda usarla sin redactar una alternativa. Si hace falta mejorarla, añade una propuesta que usa, cuando aporten información, estos campos:
+
+- resultado esperado;
+- contexto y fuentes necesarias;
+- alcance y exclusiones;
+- archivos o módulos editables;
+- permisos y acciones prohibidas;
+- criterios de aceptación;
+- comprobaciones esperadas;
+- preguntas que cambiarían materialmente el resultado.
+
+No añadirá requisitos por iniciativa propia. Distinguirá datos confirmados, supuestos propuestos y preguntas. El colaborador elige qué versión se envía al siguiente agente.
+
+Los límites de la ejecución de DEV-00 (preparar mediante lectura sin editar ni ejecutar) no se transfieren automáticamente al encargo destinatario. Este conserva las acciones solicitadas y autorizadas en la petición original, sujetas al contrato del rol y a las aclaraciones pendientes. Los documentos objeto de revisión no excluyen la consulta de fuentes rectoras; no se inventarán prohibiciones adicionales de lectura.
+
+**Configuración provisional de DEV-00:** GPT-6 Luna (`gpt-6-luna`) con esfuerzo Low (`low`), aprobada el 2026-09-30 tras dos respuestas iniciales satisfactorias de EVAL-00. La selección se hace antes de la ejecución en el cliente; el [prompt manual](prompts/dev-00-preparar-peticion.md) no cambia el modelo ni configura un agente ejecutable. No escalar ni sustituirlo sin autorización del colaborador. Si la configuración efectiva no es visible, declararla no verificada.
+
+La salida distingue **lista para aprobación del colaborador** de **pendiente de aclaración**. Las preguntas materiales y las propuestas de alcance o permisos sin confirmar impiden presentar el encargo como listo para ejecución. DEV-00 no envía el encargo ni activa el siguiente rol.
 
 ## Reglas de concurrencia
 
@@ -58,6 +89,7 @@ La petición manual indicará objetivo, colaborador responsable, rol, archivos e
 
 | Rol | Salida mínima |
 | --- | --- |
+| Preparador de petición | Petición original, recomendación y estado listo/pendiente; propuesta mejorada solo si hace falta, supuestos introducidos y preguntas materiales pendientes. |
 | Developer | Archivos locales cambiados, explicación breve, criterios cubiertos, comandos y resultados de comprobaciones breves y pruebas pendientes para el Tester. |
 | Reviewer | Diff o estado revisado; hallazgos con archivo, ubicación, impacto y evidencia; declaración explícita si no hay hallazgos. |
 | Tester | Estado examinado, comandos y casos ejecutados, resultado esperado y observado, fallos reproducibles y comprobaciones no ejecutadas. |
@@ -94,3 +126,5 @@ Cada tarea debe dejar, en proporción a su riesgo: objetivo, cambios realizados,
 ## Preparación para evaluar modelos
 
 Los modelos se compararán por rol y no como una elección única: capacidad de razonamiento y revisión, calidad de edición de código, fiabilidad de pruebas, coste, latencia, contexto disponible, privacidad, capacidad de usar herramientas y facilidad de sustituirlos. La comparación partirá de tareas representativas y datos sintéticos o autorizados.
+
+La [matriz de modelos](matriz-modelos-agentes-desarrollo.md) contiene la selección provisional de DEV-00, la política provisional aprobada de DEV-02 y los candidatos de los demás roles, sujetos a disponibilidad en cada cuenta Plus y a los resultados del piloto.
