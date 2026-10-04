@@ -9,7 +9,7 @@ Esta carpeta describe el producto, sus decisiones y su evolución para que una p
 **Fase:** definición y estudio global de módulos.  
 **Implementación de producto:** no iniciada.  
 **Arquitectura técnica concreta:** pendiente.  
-**Próximo objetivo:** evaluar configuraciones de agentes de desarrollo dentro de las suscripciones conforme a ADR-004; para los agentes internos del producto, continuar el descubrimiento y cerrar las decisiones de Core e Identidad y Seguridad.
+**Próximo objetivo:** ejecutar el piloto documental de agentes de desarrollo conforme a ADR-004 y la matriz inicial de modelos; para los agentes internos del producto, continuar el descubrimiento y cerrar las decisiones de Core e Identidad y Seguridad.
 
 ## Cómo leerla
 
