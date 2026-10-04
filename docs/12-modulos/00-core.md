@@ -2,7 +2,7 @@
 
 ## Estado
 
-**Fase 1 iniciada.** Este documento formula una propuesta conceptual; no define una arquitectura técnica ni un modelo de datos definitivo.
+**Fase 1 — modelo de entidades, relaciones, eventos y auditoría aprobado por ADR-005.** La tecnología concreta de persistencia y de entrega de eventos sigue sin definirse; ver `docs/13-adrs/ADR-005-modelo-core.md`.
 
 ## Propósito
 
@@ -26,9 +26,13 @@ Evita que cada módulo invente su propia manera de identificar objetos, enlazarl
 - No actuar como un cajón genérico para lógica no clasificada.
 - No acceder a sistemas externos como responsabilidad principal.
 
-## Entidades y relaciones — propuesta inicial
+## Entidades, relaciones y eventos — modelo aprobado (ADR-005)
 
-Se estudiarán como conceptos, no como tablas aún: `Entidad del dominio`, `Relación`, `Área/Categoría`, `Actor/Identidad`, `Evento interno` y `Registro de auditoría`. Un elemento de un módulo podrá relacionarse con otro mediante una relación explícita y con significado definido; por ejemplo, una tarea asociada a un documento o a un evento.
+- **Entidad común:** vive en Core cuando al menos dos módulos funcionales necesitan referenciarla sin que ninguno sea su dueño natural. Core no duplica el dato del módulo dueño; ofrece un identificador estable y una descripción mínima (tipo, título breve).
+- **Relación explícita:** vínculo dirigido entre dos entidades referenciables, con un tipo declarado libremente por quien la crea (`relacionado-con`, `depende-de`, `documenta-a`...), sin catálogo cerrado en el MVP. Core garantiza integridad referencial, limpieza al eliminar una entidad, y consulta inversa aunque la relación se declare en un solo sentido.
+- **Evento interno:** mensaje que un módulo emite cuando algo relevante ocurre en una de sus entidades, con tipo, referencia a la entidad y marca de tiempo. Los módulos se suscriben a los tipos que les interesan sin que el emisor conozca a sus consumidores. Todo evento debe poder procesarse más de una vez sin duplicar su efecto; el orden entre reglas que reaccionan al mismo evento no está garantizado en el MVP.
+- **Registro de auditoría:** todo evento interno queda registrado con tipo, entidad afectada, actor que lo originó y marca de tiempo, desde el MVP.
+- `Área/Categoría` y `Actor/Identidad` siguen como conceptos transversales; `Actor/Identidad` pertenece por dueño natural a Identidad y Seguridad, no a Core, aunque todos los módulos lo referencien.
 
 ## Dependencias
 
@@ -45,8 +49,8 @@ Core debe ofrecer puntos para autorización, auditoría y emisión de eventos in
 
 ## Decisiones pendientes
 
-- Qué convierte exactamente a un concepto en entidad común.
-- Tipos y semántica de relaciones.
-- Modelo de eventos internos, entrega, reintentos e idempotencia.
-- Separación concreta entre Core, servicios de aplicación y módulos.
-- Alcance mínimo de auditoría y autorización en el MVP.
+Resuelto por ADR-005: qué convierte a un concepto en entidad común, tipos y semántica de relaciones, modelo de eventos internos, separación Core/módulos, y alcance mínimo de auditoría. Quedan abiertas:
+
+- Autorización concreta (quién puede hacer qué) — bloque 1 de `docs/01-proyecto/decisiones-transversales-pendientes.md`, todavía pendiente.
+- Tecnología concreta de entrega de eventos (cola, tabla con estado, u otra).
+- Si en algún momento conviene cerrar un catálogo de tipos de relación o de evento, y cuándo.

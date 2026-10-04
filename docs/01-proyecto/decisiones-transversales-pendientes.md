@@ -23,7 +23,7 @@ Cada bloque agrupa una pregunta de fondo, qué módulos la plantearon (entre par
 
 **Bloquea:** el modelo de `Actor/Identidad` de Core, y cualquier decisión de permisos en Identidad y Seguridad, Configuración, Documentos, Finanzas y Backup queda provisional hasta resolver esto.
 
-## 2. Modelo de eventos internos, relaciones y auditoría de Core
+## 2. Modelo de eventos internos, relaciones y auditoría de Core — RESUELTO (ADR-005)
 
 **Pregunta de fondo:** ¿qué hace que algo sea una "entidad común" de Core, cómo se tipan las relaciones explícitas entre módulos, y cómo se entregan los eventos internos (reintentos, idempotencia, orden)?
 
