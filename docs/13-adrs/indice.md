@@ -6,5 +6,6 @@
 | [ADR-002](../general-docs/fuentes/adrs/ADR-002/ADR-002_ARQUITECTURA_MULTICLIENTE_MOVIL_VOZ.md) | Decisión | Clientes separados de API, Core, datos e integraciones; móvil/voz futuros. |
 | [ADR-003](ADR-003-priorizacion-descubrimiento-ia-agentes.md) | Decisión | Priorizar el descubrimiento y diseño de IA/Agentes antes de seleccionar o implementar agentes. |
 | [ADR-004](ADR-004-contratos-agentes-desarrollo.md) | Decisión | Contratos manuales por rol, Git gestionado por colaboradores y evaluación dentro de las suscripciones. |
+| [ADR-005](ADR-005-modelo-core.md) | Decisión | Modelo de entidades referenciables, relaciones explícitas, eventos internos y auditoría mínima de Core. |
 
 Las nuevas decisiones se crearán en esta carpeta con formato ADR y se añadirán a este índice.
