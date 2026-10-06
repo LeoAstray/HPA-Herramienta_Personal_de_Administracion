@@ -15,4 +15,6 @@ Antes de implementar un cambio relevante se debe documentar problema, objetivo, 
 
 ## Registro mínimo
 
+Cada cambio debe actualizar el [roadmap](../01-proyecto/roadmap.md), indicando el avance realizado, los pendientes y el siguiente paso. Si no cambia el orden de los hitos, registrar igualmente el avance. El trabajo no se considera documentalmente cerrado sin esta actualización. Regla explicitada por el colaborador el 2026-10-07.
+
 Todo cambio relevante se registra en `14-cambios/` y enlaza a requisitos, ADR, pruebas y tareas de Asana cuando existan. Nunca se guardan secretos reales.
