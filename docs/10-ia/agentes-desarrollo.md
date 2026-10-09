@@ -127,9 +127,9 @@ Cada cambio debe actualizar también el [roadmap](../01-proyecto/roadmap.md), re
 
 ## Diseño de comprobación de permisos — EVAL-05
 
-El [diseño preparado el 2026-10-07](diseno-evaluacion-permisos-agentes.md) deriva la matriz de estos contratos y propone casos positivos/negativos sobre recursos sintéticos. Separa cumplimiento de instrucciones de bloqueo técnico; las sondas técnicas equivalentes las realiza una persona dentro del laboratorio y no autorizan al agente a incumplir su rol. No se modifica ADR-004 ni se aplica configuración de herramienta. Laboratorio, controles y ejecución permanecen pendientes; no se atribuye verificación efectiva a este diseño.
+El [diseño preparado el 2026-10-07](diseno-evaluacion-permisos-agentes.md) deriva la matriz de estos contratos y propone casos positivos/negativos sobre recursos sintéticos. Separa cumplimiento de instrucciones de bloqueo técnico; las sondas técnicas equivalentes las realiza una persona dentro del laboratorio y no autorizan al agente a incumplir su rol. El diseño no modifica ADR-004 ni constituye verificación efectiva de controles.
 
-Posteriormente, el colaborador comunica conformidad con el diseño inicial y precisa que la revisión le corresponde a él. La [ficha del entorno](entorno-eval-05.md) concreta rutas/perfiles propuestos y capacidades declaradas de esta sesión; queda pendiente de su revisión según la [guía humana](revision-eval-05-colaborador.md). No se requiere lanzar Reviewer para esa revisión documental; los roles de los agentes y la validación futura de controles no cambian.
+La [ficha del entorno](entorno-eval-05.md) concreta rutas y perfiles propuestos, y la [guía humana](revision-eval-05-colaborador.md) establece la revisión por el colaborador. El avance, los pendientes y el siguiente paso se mantienen en el [seguimiento de EVAL-05 en el roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05).
 
 ## Preparación para evaluar modelos
 
