@@ -2,7 +2,7 @@
 
 ## Estado y revisión humana
 
-**2026-10-07:** el colaborador comunica «veo todos los cambios bien» y precisa que él realiza la revisión. Se registra su conformidad humana con el diseño inicial; no se requiere un Reviewer agente. Esta ficha nueva y la [guía de revisión humana](revision-eval-05-colaborador.md) quedan preparadas para su revisión. Laboratorio, perfiles y sondas aún no creados ni ejecutados.
+El estado de revisión, el avance, los pendientes y el siguiente paso se mantienen en el [seguimiento de EVAL-05 en el roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05). La revisión corresponde al colaborador según la [guía de revisión humana](revision-eval-05-colaborador.md).
 
 La preparación sigue el [diseño EVAL-05](diseno-evaluacion-permisos-agentes.md). No se cambian contratos, herramientas globales, configuración personal, permisos Windows ni decisiones del producto.
 
@@ -69,20 +69,22 @@ La documentación oficial describe perfiles con permisos `read`, `write` y `deny
 
 ## Puertas de entrada y responsable
 
-| Puerta | Evidencia necesaria | Estado actual |
-| --- | --- | --- |
-| G1 Revisión por el colaborador | Valoración humana de una versión identificada; observaciones y límites | Diseño inicial conforme según el colaborador; ficha nueva pendiente de revisión |
-| G2 Raíz sintética | Ruta absoluta existente, propietario, ausencia de enlaces a HPA/datos reales | Propuesta; no creada |
-| G3 Perfil efectivo por rol | Rutas y canales declarados por el cliente, sin escalación; recursos mínimos delimitados | Pendiente de configurar y comprobar |
-| G4 Fuentes y clave | Manifiesto con revisión/hash; clave fuera del contexto y lectura denegada | Pendiente |
-| G5 Evidencia de acciones | Fuente de trazas disponible, canales cubiertos y custodia por el evaluador | Pendiente; no asumir acceso a registros completos |
-| G6 Encargo manual | Persona responsable, rol, modelo/esfuerzo seleccionado y casos precisos | Pendiente de completar |
+El estado de cumplimiento de estas puertas se mantiene en el [roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05).
 
-El colaborador responsable será quien prepare y confirme el laboratorio; cualquiera de los dos puede asumirlo. Su nombre no consta aún. Se registrará al completar G2/G6. Esta ficha no crea una tarea de Asana ni modifica el issue.
+| Puerta | Evidencia necesaria |
+| --- | --- |
+| G1 Revisión por el colaborador | Valoración humana de una versión identificada; observaciones y límites |
+| G2 Raíz sintética | Ruta absoluta existente, propietario, ausencia de enlaces a HPA/datos reales |
+| G3 Perfil efectivo por rol | Rutas y canales declarados por el cliente, sin escalación; recursos mínimos delimitados |
+| G4 Fuentes y clave | Manifiesto con revisión/hash; clave fuera del contexto y lectura denegada |
+| G5 Evidencia de acciones | Fuente de trazas disponible, canales cubiertos y custodia por el evaluador; no asumir acceso a registros completos |
+| G6 Encargo manual | Persona responsable, rol, modelo/esfuerzo seleccionado y casos precisos |
+
+El colaborador responsable será quien prepare y confirme el laboratorio; cualquiera de los dos puede asumirlo. Su nombre se registrará al completar G2/G6. Esta ficha no crea una tarea de Asana ni modifica el issue.
 
 ## Orden práctico de preparación
 
-1. El colaborador revisa esta ficha usando la guía enlazada al principio; la conformidad con el diseño inicial ya está comunicada. No se lanza otro agente para revisar.
+1. El colaborador revisa esta ficha usando la guía enlazada al principio. No se lanza otro agente para revisar.
 2. Resolver los hallazgos mediante un encargo de corrección si corresponde, identificando la nueva versión.
 3. El colaborador prepara la raíz y los perfiles del laboratorio en una sesión separada; conserva evidencia de configuración y anota qué mecanismos de sonda equivalentes existen.
 4. Completar manifiesto, custodia de clave y cobertura de trazas. No iniciar sondas si G2–G5 dejan accesibles HPA, datos reales o servicios externos.
@@ -92,4 +94,4 @@ Si no se puede satisfacer una puerta, documentar la capacidad no verificable y r
 
 ## Seguimiento
 
-[Roadmap](../01-proyecto/roadmap.md), [registro de evaluación](evaluacion-agentes-desarrollo.md) y [CHG-022](../14-cambios/CHG-022-preparacion-revision-y-entorno-eval-05.md) mantienen el avance. El siguiente paso es la revisión de la ficha por el colaborador; el laboratorio requiere completar las puertas antes de un encargo de ejecución.
+El [seguimiento de EVAL-05 en el roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05) mantiene el avance y el estado de las puertas G1–G6. El [registro de evaluación](evaluacion-agentes-desarrollo.md) conserva las evidencias y [CHG-022](../14-cambios/CHG-022-preparacion-revision-y-entorno-eval-05.md) documenta esta preparación histórica.

@@ -36,7 +36,7 @@ EVAL-04 se registra el 2026-10-03 con Reviewer satisfactorio (Sol 6.1 / Medium c
 
 En la primera entrega del 2026-10-07 se prepara el [diseño EVAL-05](../10-ia/diseno-evaluacion-permisos-agentes.md) para el [issue #36](https://github.com/LeoAstray/HPA-Herramienta_Personal_de_Administracion/issues/36): matriz de permisos, casos sintéticos, separación del evaluador, evidencias y procedimiento. En ese momento quedan pendientes revisión, entorno, configuración y ejecución. No se lanzan agentes ni se verifican controles efectivos. Se explicita la actualización obligatoria del roadmap en cada cambio; los issues se preparan localmente para publicación manual del colaborador.
 
-**Avance posterior:** el colaborador comunica conformidad con el diseño inicial EVAL-05 y confirma que la revisión la realiza él. Se prepara una [ficha concreta del entorno](../10-ia/entorno-eval-05.md) y una [guía humana](../10-ia/revision-eval-05-colaborador.md), pendientes de su revisión. El contexto actual declara lectura amplia, escritura sobre HPA y herramientas externas disponibles: no acredita la frontera del laboratorio. No se cambia la configuración ni se ejecutan sondas. Siguiente paso: revisar la ficha y preparar los perfiles/recursos separados antes del encargo de ejecución. [CHG-022](../14-cambios/CHG-022-preparacion-revision-y-entorno-eval-05.md) registra la preparación.
+El avance, los pendientes y el siguiente paso se mantienen en el [seguimiento de EVAL-05 en el roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05).
 
 ## Convención de estado
 

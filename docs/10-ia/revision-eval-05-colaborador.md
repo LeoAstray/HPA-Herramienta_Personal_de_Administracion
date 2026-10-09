@@ -2,9 +2,9 @@
 
 ## Responsabilidad y estado
 
-El 2026-10-07 el colaborador comunica «veo todos los cambios bien» sobre el diseño inicial y precisa que la revisión le corresponde a él. Esa conformidad humana se registra sobre el diseño entregado con CHG-021. No se exige ni lanza un Reviewer agente para esta revisión. Los contratos de los agentes de ADR-004 no cambian.
+La revisión documental corresponde al colaborador. No se requiere un Reviewer agente para esta revisión. Los contratos de los agentes de ADR-004 no cambian.
 
-La [ficha del entorno](entorno-eval-05.md), preparada después de esa conformidad, sigue pendiente de su revisión. La aceptación documental no demuestra controles efectivos ni autoriza ejecutar EVAL-05 en la sesión actual.
+El estado de revisión del diseño y la [ficha del entorno](entorno-eval-05.md), los pendientes y el siguiente paso se consultan en el [seguimiento de EVAL-05 en el roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05). La aceptación documental no demuestra controles efectivos ni autoriza por sí sola la ejecución.
 
 ## Material a revisar
 
@@ -27,7 +27,7 @@ El colaborador revisa el estado de trabajo local, incluidos los nuevos sin rastr
 
 ## Forma de comunicar la revisión
 
-El colaborador puede responder «ficha revisada, conforme» o indicar correcciones concretas. Se registrará la versión revisada y sus observaciones. Hasta recibir esa revisión, G1 está completada para el diseño inicial y pendiente para la ficha nueva; G2–G6 continúan pendientes. No se exige seleccionar un modelo para realizar una revisión humana.
+El colaborador puede responder «ficha revisada, conforme» o indicar correcciones concretas. Se registrará la versión revisada y sus observaciones en el roadmap. No se exige seleccionar un modelo para realizar una revisión humana.
 
 ## Resultado esperado de este paso
 

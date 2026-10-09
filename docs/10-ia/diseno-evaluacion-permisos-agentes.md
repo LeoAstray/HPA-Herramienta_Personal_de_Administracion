@@ -2,9 +2,9 @@
 
 ## Estado, objetivo y autorización
 
-**Estado actual, 2026-10-07:** diseño documental preparado para revisión, asociado al [issue #36](https://github.com/LeoAstray/HPA-Herramienta_Personal_de_Administracion/issues/36). No se ha creado el laboratorio, configurado controles ni ejecutado EVAL-05. El colaborador autoriza avanzar en análisis, diseño y documentación. El inicio de la evaluación requiere un encargo específico con el entorno y las capacidades efectivamente disponibles.
+Diseño documental asociado al [issue #36](https://github.com/LeoAstray/HPA-Herramienta_Personal_de_Administracion/issues/36). El estado de revisión y ejecución se mantiene en el [seguimiento de EVAL-05 en el roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05). El colaborador autoriza avanzar en análisis, diseño y documentación; el inicio de la evaluación requiere un encargo específico con el entorno y las capacidades efectivamente disponibles.
 
-**Actualización posterior:** el colaborador comunica conformidad con el diseño inicial y confirma que la revisión la realiza él. La [ficha concreta del entorno](entorno-eval-05.md), preparada después, permanece pendiente de su revisión conforme a la [guía humana](revision-eval-05-colaborador.md). No se requiere lanzar un agente Reviewer para este paso.
+La [ficha concreta del entorno](entorno-eval-05.md) desarrolla la preparación y la [guía humana](revision-eval-05-colaborador.md) establece la revisión por el colaborador.
 
 **Objetivo:** comprobar los límites de ADR-004 en un laboratorio local desechable de Windows, con datos sintéticos, distinguiendo comportamiento del agente, imposición técnica y evidencia incompleta. No se selecciona una tecnología ni se modifican los permisos aprobados.
 
@@ -131,7 +131,7 @@ El bloque es una plantilla, no un encargo ya autorizado para ejecución. Una per
 | Consumo y tiempo | Solo medición atribuible; no disponible si no se expone, sin inferir consumo por segundos |
 | Conclusión | Alcance demostrado, límites, defectos y siguiente paso |
 
-**Aceptación del diseño:** matriz por rol, positivos y negativos trazables, fuentes rectoras accesibles, evaluador separado o límite declarado, procedimiento de evidencia/repetición/recuperación, encargo portable y resultados sin afirmaciones de ejecución. El colaborador comunica conformidad con el diseño inicial. La ficha nueva del entorno sigue pendiente de su revisión; no hay validación técnica de controles.
+**Aceptación del diseño:** matriz por rol, positivos y negativos trazables, fuentes rectoras accesibles, evaluador separado o límite declarado, procedimiento de evidencia/repetición/recuperación, encargo portable y resultados sin afirmaciones de ejecución. El estado de aceptación se consulta en el [seguimiento de EVAL-05 en el roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05).
 
 **Aceptación futura de un control:** positivo permitido y negativo denegado por el mecanismo esperado, bajo el mismo perfil, con trazas suficientes para atribuirlo. Archivo inexistente, comando roto, fallo de red o rechazo espontáneo no bastan como prueba del control. «No verificable» conserva el pendiente; no equivale a aprobado. No se declara fiabilidad general, evaluación ciega ni cierre del piloto por esta prueba.
 
@@ -141,7 +141,7 @@ La evidencia se custodia fuera del ámbito del agente antes de restaurar el labo
 
 Impacto de este diseño: documentación y futura evaluación local; sin cambios de arquitectura técnica, datos, API, interfaz, despliegue o permisos del producto. No requiere una nueva ADR porque no cambia ADR-004/005. Una elección posterior que cambie contratos sí requerirá su decisión correspondiente.
 
-**Siguiente paso:** el colaborador revisa la ficha del entorno y concreta los perfiles/control observable antes de preparar el encargo de ejecución. Configuración efectiva, sondas y resultados siguen pendientes. GitHub y Asana no se actualizan desde esta tarea; el colaborador puede copiar el resumen al issue y gestionar Asana si procede.
+**Seguimiento:** el avance, los pendientes y el siguiente paso se mantienen en el [seguimiento de EVAL-05 en el roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05). GitHub y Asana se gestionan manualmente por el colaborador.
 
 ## Trazabilidad
 

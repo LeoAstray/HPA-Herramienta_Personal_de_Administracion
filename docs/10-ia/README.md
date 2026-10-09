@@ -12,6 +12,6 @@ Los [escenarios y resultados de evaluación](evaluacion-agentes-desarrollo.md) r
 
 La [matriz inicial de modelos](matriz-modelos-agentes-desarrollo.md) recoge la investigación documentada el 2026-09-30, las selecciones provisionales de DEV-00 y DEV-02 y los candidatos de los demás roles. Los resultados son específicos de los casos evaluados y no demuestran ahorro ni fiabilidad general.
 
-El [diseño EVAL-05](diseno-evaluacion-permisos-agentes.md), preparado el 2026-10-07 para el issue #36, define cómo evaluar comportamiento y controles efectivos en un entorno sintético. No hay resultados de EVAL-05. El [roadmap](../01-proyecto/roadmap.md) mantiene los siguientes pasos y debe actualizarse en cada cambio.
+El [diseño EVAL-05](diseno-evaluacion-permisos-agentes.md), preparado el 2026-10-07 para el issue #36, define cómo evaluar comportamiento y controles efectivos en un entorno sintético. La [ficha de entorno](entorno-eval-05.md) y la [guía de revisión humana](revision-eval-05-colaborador.md) desarrollan su preparación.
 
-**Actualización posterior:** el colaborador comunica conformidad con ese diseño y confirma que él revisa. Se prepara la [ficha de entorno](entorno-eval-05.md) y la [guía de revisión humana](revision-eval-05-colaborador.md). La ficha nueva está pendiente de su revisión; raíz, perfiles y evidencia siguen pendientes. Esta sesión no cumple la frontera propuesta y no se usa para ejecutar EVAL-05.
+El avance, los pendientes y el siguiente paso se mantienen en el [seguimiento de EVAL-05 en el roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05), que debe actualizarse en cada cambio.
