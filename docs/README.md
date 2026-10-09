@@ -9,7 +9,7 @@ Esta carpeta describe el producto, sus decisiones y su evolución para que una p
 **Fase:** definición y estudio global de módulos.  
 **Implementación de producto:** no iniciada.  
 **Arquitectura técnica concreta:** pendiente.  
-**Próximo objetivo:** ejecutar el piloto documental de agentes de desarrollo conforme a ADR-004 y la matriz inicial de modelos; para los agentes internos del producto, continuar el descubrimiento y cerrar las decisiones de Core e Identidad y Seguridad.
+**Próximo objetivo:** el colaborador revisa la [ficha de entorno EVAL-05](10-ia/entorno-eval-05.md), posterior a su conformidad con el diseño inicial; después se completan perfiles y evidencias antes de encargar la ejecución. La sesión actual no constituye un laboratorio aislado. Para el producto, Core ya tiene modelo conceptual aprobado (ADR-005); quedan identidad, permisos y sesiones. El [roadmap](01-proyecto/roadmap.md) se actualiza en cada cambio.
 
 ## Cómo leerla
 

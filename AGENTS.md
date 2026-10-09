@@ -26,4 +26,8 @@ La primera interfaz será web responsive para uso personal. Móvil, Siri/voz, ag
 
 ## Documentación que debe actualizarse
 
+Cada cambio debe actualizar `docs/01-proyecto/roadmap.md`: registrar el avance, los pendientes y el siguiente paso, aunque no cambie el orden de los hitos. Esta actualización forma parte del cierre del trabajo.
+
 Cada cambio relevante debe actualizar el documento del módulo afectado, requisitos/arquitectura/seguridad cuando proceda, ADR si decide algo relevante y el registro de cambios. Mantener Markdown como versión mantenible para personas y agentes. Guardar las ediciones DOCX/PDF y su contexto de publicación en `docs/documentacion/publicaciones/<YYYY-MM-DD_HH-mm-ss>-<nombre>/`, fuera de las áreas Markdown numeradas.
+
+Los issues de GitHub se preparan como texto local para que el colaborador los publique manualmente. No acceder al remoto ni utilizar una sesión de GitHub sin una nueva petición expresa del colaborador.
