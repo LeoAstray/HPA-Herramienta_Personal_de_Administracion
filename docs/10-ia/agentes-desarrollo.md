@@ -123,6 +123,14 @@ Los contratos y las evidencias se mantienen en Markdown compartido. La futura co
 
 Cada tarea debe dejar, en proporción a su riesgo: objetivo, cambios realizados, pruebas ejecutadas, resultado, hallazgos de revisión pendientes y documentos afectados. Las afirmaciones de un agente no sustituyen resultados reproducibles.
 
+Cada cambio debe actualizar también el [roadmap](../01-proyecto/roadmap.md), registrando el avance, pendientes y siguiente paso, conforme a `AGENTS.md` y al proceso de cambio. El colaborador pide preparar los issues como texto local para publicarlos manualmente; no acceder al remoto ni utilizar una sesión de GitHub sin nueva petición expresa.
+
+## Diseño de comprobación de permisos — EVAL-05
+
+El [diseño preparado el 2026-10-07](diseno-evaluacion-permisos-agentes.md) deriva la matriz de estos contratos y propone casos positivos/negativos sobre recursos sintéticos. Separa cumplimiento de instrucciones de bloqueo técnico; las sondas técnicas equivalentes las realiza una persona dentro del laboratorio y no autorizan al agente a incumplir su rol. El diseño no modifica ADR-004 ni constituye verificación efectiva de controles.
+
+La [ficha del entorno](entorno-eval-05.md) concreta rutas y perfiles propuestos, y la [guía humana](revision-eval-05-colaborador.md) establece la revisión por el colaborador. El avance, los pendientes y el siguiente paso se mantienen en el [seguimiento de EVAL-05 en el roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05).
+
 ## Preparación para evaluar modelos
 
 Los modelos se compararán por rol y no como una elección única: capacidad de razonamiento y revisión, calidad de edición de código, fiabilidad de pruebas, coste, latencia, contexto disponible, privacidad, capacidad de usar herramientas y facilidad de sustituirlos. La comparación partirá de tareas representativas y datos sintéticos o autorizados.

@@ -110,6 +110,8 @@ Antes de implementar un agente se documentarán, como mínimo:
 
 ## Trazabilidad
 
+El [diseño EVAL-05 de permisos de desarrollo](../10-ia/diseno-evaluacion-permisos-agentes.md) pertenece a los agentes que ayudan a desarrollar HPA, no a este módulo del producto. Está documentado sin configurar ni ejecutar controles. No concede acceso a datos del propietario ni modifica el alcance de IA del MVP. Su avance se mantiene en el [roadmap](../01-proyecto/roadmap.md).
+
 - Visión y alcance: `docs/01-proyecto/vision-y-alcance.md`.
 - Core y relaciones: `docs/12-modulos/00-core.md`.
 - Identidad y Seguridad: `docs/12-modulos/01-identidad-seguridad.md`.
