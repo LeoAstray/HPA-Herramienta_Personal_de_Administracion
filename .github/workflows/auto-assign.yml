@@ -19,6 +19,7 @@ jobs:
           ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
           REPO: ${{ github.repository }}
         run: |
-          gh issue edit "$ISSUE_NUMBER" \
-            --repo "$REPO" \
-            --add-assignee "$ISSUE_AUTHOR"
+          gh api \
+            --method POST \
+            "repos/$REPO/issues/$ISSUE_NUMBER/assignees" \
+            -f "assignees[]=$ISSUE_AUTHOR"
