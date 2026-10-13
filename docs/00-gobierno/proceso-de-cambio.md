@@ -6,6 +6,18 @@ Antes de implementar un cambio relevante se debe documentar problema, objetivo, 
 
 `Análisis -> Diseño -> Documentación -> Asana -> Implementación -> Pruebas -> Documentación actualizada`
 
+## Automatización de asignación de issues
+
+El workflow [Auto-assign issue creator](../../.github/workflows/auto-assign.yml) organiza el desarrollo: al abrirse un issue (`issues`, tipo `opened`), solicita añadir a su autor como responsable. No actúa al editar o reabrir un issue ni procesa retrospectivamente los existentes. La operación añade responsables sin retirar los que ya existan, según el [contrato de la API de GitHub](https://docs.github.com/en/rest/issues/assignees#add-assignees-to-an-issue).
+
+La configuración usa un runner `ubuntu-latest` y GitHub CLI para llamar a la API de asignación. Declara únicamente `issues: write`; el token automático de GitHub Actions se entrega mediante `GH_TOKEN`, sin credenciales personales guardadas en el archivo. No realiza checkout ni operaciones Git sobre archivos del proyecto.
+
+Para que el evento dispare el workflow, el archivo debe existir en la rama por defecto del repositorio y GitHub Actions debe estar habilitado. Véase la [documentación del evento `issues`](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#issues). La asignación depende de los permisos efectivos y de que GitHub permita asignar al autor. Su comprobación requiere revisar la ejecución en Actions y el responsable resultante del issue.
+
+La automatización se limita a esa asignación. Los colaboradores crean, revisan y cierran issues, gestionan Asana y realizan ramas, staging, commits, push, pull requests y merges manualmente. Los agentes conservan los límites de ADR-004; esta automatización no les concede escritura externa. Es una herramienta de organización del repositorio y no una dependencia del producto.
+
+La configuración observada, las evidencias disponibles y la continuación se mantienen en el [seguimiento del workflow del roadmap](../01-proyecto/roadmap.md#seguimiento-del-workflow-de-asignación-de-issues).
+
 ## Fuente de verdad y formatos
 
 1. Markdown, organizado por área y módulo, es la versión editable y consultable por agentes.
