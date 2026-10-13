@@ -2,7 +2,7 @@
 
 ## Estado
 
-**Propuesta pendiente de revisión.** No es una decisión. Responde al bloque 1 de [decisiones transversales pendientes](../01-proyecto/decisiones-transversales-pendientes.md). Si ambos colaboradores la acuerdan, con o sin cambios, se formaliza como ADR-006 siguiendo el [proceso de cambio](../00-gobierno/proceso-de-cambio.md).
+**Propuesta.** No es una decisión. Responde al bloque 1 de [decisiones transversales pendientes](../01-proyecto/decisiones-transversales-pendientes.md). Si ambos colaboradores la acuerdan, con o sin cambios, se formaliza como ADR-006 siguiendo el [proceso de cambio](../00-gobierno/proceso-de-cambio.md). El estado de revisión y la continuación se consultan en el [seguimiento del roadmap](../01-proyecto/roadmap.md#seguimiento-de-identidad-permisos-y-sesiones).
 
 ## Por qué ahora
 
@@ -79,6 +79,6 @@ En el MVP el propietario tiene todos los permisos, pero toda comprobación pasa 
 4. Si los avisos de seguridad no se pueden desactivar.
 5. Si se confirma la lista inicial de acciones sensibles.
 
-## Siguiente paso
+## Seguimiento
 
-Revisar esta propuesta entre ambos colaboradores. Si se acuerda, formalizarla como ADR-006 y actualizar los módulos y el bloque 1 de decisiones transversales.
+El avance, los pendientes y el siguiente paso se mantienen en el [seguimiento de identidad, permisos y sesiones del roadmap](../01-proyecto/roadmap.md#seguimiento-de-identidad-permisos-y-sesiones).
