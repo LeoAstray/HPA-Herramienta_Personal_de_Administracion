@@ -14,4 +14,6 @@ La [matriz inicial de modelos](matriz-modelos-agentes-desarrollo.md) recoge la i
 
 El [diseño EVAL-05](diseno-evaluacion-permisos-agentes.md), preparado el 2026-10-07 para el issue #36, define cómo evaluar comportamiento y controles efectivos en un entorno sintético. La [ficha de entorno](entorno-eval-05.md) y la [guía de revisión humana](revision-eval-05-colaborador.md) desarrollan su preparación.
 
+La [preparación del encargo Developer](encargo-eval-05-developer.md) identifica el primer perfil, los campos que requiere el laboratorio y una plantilla futura. La ficha, guía y encargo R1 son documentación para revisión humana; no constituyen configuración ni autorización de ejecución.
+
 El avance, los pendientes y el siguiente paso se mantienen en el [seguimiento de EVAL-05 en el roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05), que debe actualizarse en cada cambio.

@@ -2,13 +2,15 @@
 
 ## Estado y revisión humana
 
+**Versión documental: EVAL-05-ENTORNO-R1, preparada el 2026-10-14.** Identifica el documento que se entrega para revisión humana; no acredita configuración ni ejecución.
+
 El estado de revisión, el avance, los pendientes y el siguiente paso se mantienen en el [seguimiento de EVAL-05 en el roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05). La revisión corresponde al colaborador según la [guía de revisión humana](revision-eval-05-colaborador.md).
 
 La preparación sigue el [diseño EVAL-05](diseno-evaluacion-permisos-agentes.md). No se cambian contratos, herramientas globales, configuración personal, permisos Windows ni decisiones del producto.
 
-## Inventario acotado de la sesión actual
+## Inventario histórico de la sesión del 2026-10-07
 
-Fuentes: contexto de permisos de esta sesión y comprobación local de plataforma/versiones, sin leer credenciales ni configuración personal.
+Fuentes: contexto de permisos de aquella sesión y comprobación local de plataforma/versiones, sin leer credenciales ni configuración personal. Este inventario se conserva como evidencia histórica de CHG-022; no describe un laboratorio configurado ni confirma versiones o permisos del cliente actual.
 
 | Elemento | Estado observado/declarado | Consecuencia |
 | --- | --- | --- |
@@ -23,7 +25,7 @@ Fuentes: contexto de permisos de esta sesión y comprobación local de plataform
 | Otros canales | Web, navegador y conectores disponibles en el catálogo de herramientas | No son un perfil cerrado de evaluación; no se usan para acceder a GitHub/Asana |
 | Cliente, versión exacta, modelo/esfuerzo | No medidos de forma independiente | Registrar en el encargo antes de la ejecución; no inferir del contrato |
 
-**Conclusión de preparación:** esta sesión puede mantener la documentación; no cumple la frontera sintética prevista. No se prueban denegaciones leyendo carpetas personales ni escribiendo sobre HPA. No hay resultados de los casos P01–P13.
+**Conclusión de aquella preparación:** la sesión del 2026-10-07 podía mantener la documentación, pero no cumplía la frontera sintética prevista. No se probaron denegaciones leyendo carpetas personales ni escribiendo sobre HPA. Ese inventario no aporta resultados de los casos P01–P13.
 
 ## Propuesta concreta de laboratorio
 
@@ -81,6 +83,20 @@ El estado de cumplimiento de estas puertas se mantiene en el [roadmap](../01-pro
 | G6 Encargo manual | Persona responsable, rol, modelo/esfuerzo seleccionado y casos precisos |
 
 El colaborador responsable será quien prepare y confirme el laboratorio; cualquiera de los dos puede asumirlo. Su nombre se registrará al completar G2/G6. Esta ficha no crea una tarea de Asana ni modifica el issue.
+
+## Datos requeridos para G2–G6
+
+Esta tabla define qué habrá que aportar para configurar el laboratorio y completar el [futuro encargo Developer](encargo-eval-05-developer.md). Identificar los campos satisface la preparación documental; sus valores y evidencias efectivas se completarán en la tarea de configuración. Una ruta propuesta o un perfil escrito no equivale a un recurso creado ni a un control aplicado.
+
+| Puerta | Datos que debe aportar la persona responsable | Referencia documental disponible |
+| --- | --- | --- |
+| G2 | Nombre del responsable; raíz absoluta elegida; propietario del laboratorio; ausencia de enlaces o referencias a HPA, datos reales y otros proyectos. | `C:\HPA-EVAL-05\` es una propuesta de ruta, no una elección confirmada ni una raíz creada. |
+| G3 | Cliente y versión; perfil efectivo Developer; rutas de lectura/escritura/denegación; recursos mínimos y temporales; canales disponibles; red; aprobaciones y mecanismo de sonda humana equivalente. | La matriz de esta ficha define el perfil propuesto. Compatibilidad, retirada de canales y aplicación efectiva requieren evidencia del laboratorio. |
+| G4 | Manifiesto de copias rectoras con origen, revisión y hash; versión de la muestra y del repositorio sintético; identidad del evaluador; custodia de clave y exclusión técnica de su ámbito. | El diseño define las fuentes y la separación. El agente recibe solo fuentes copiadas y aceptación visible; nunca clave ni criterios privados. |
+| G5 | Fuente de trazas; operaciones y canales cubiertos; identificadores de registros; ubicación y persona que custodia evidencias; limitaciones y conservación antes de restaurar el laboratorio. | Las tablas del diseño enumeran las evidencias necesarias. La cobertura real no se infiere de hashes, respuestas del agente o ausencia de cambios finales. |
+| G6 | Responsable del encargo; rol DEV-02; modelo/esfuerzo seleccionado; caso o casos expresamente asignados; archivos editables; temporal; herramientas y comprobaciones permitidas; aceptación visible y versión exacta de la petición. | El documento de encargo fija el rol Developer y los campos por completar. No selecciona un modelo ni autoriza ejecutar casos. |
+
+La persona responsable deberá identificar por separado los perfiles Reviewer y Tester si se preparan después. No se presupone que tengan los permisos o capacidades del Developer. Los valores que falten se registran como no disponibles; un requisito técnico no verificable conserva su límite y no se marca como control aprobado.
 
 ## Orden práctico de preparación
 
