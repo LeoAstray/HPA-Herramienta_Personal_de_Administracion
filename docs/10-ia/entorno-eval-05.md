@@ -2,7 +2,7 @@
 
 ## Estado y revisión humana
 
-**Versión documental: EVAL-05-ENTORNO-R1, preparada el 2026-10-14.** Identifica el documento que se entrega para revisión humana; no acredita configuración ni ejecución.
+**Versión documental: EVAL-05-ENTORNO-R2, preparada el 2026-10-15.** Aplica a R1 el cambio de ruta solicitado por el colaborador. Identifica la versión documental; no acredita configuración ni ejecución. La fuente y el alcance de la revisión se consultan en el roadmap y en CHG-029.
 
 El estado de revisión, el avance, los pendientes y el siguiente paso se mantienen en el [seguimiento de EVAL-05 en el roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05). La revisión corresponde al colaborador según la [guía de revisión humana](revision-eval-05-colaborador.md).
 
@@ -29,10 +29,10 @@ Fuentes: contexto de permisos de aquella sesión y comprobación local de plataf
 
 ## Propuesta concreta de laboratorio
 
-Raíz propuesta: `C:\HPA-EVAL-05\`, sin crear. El colaborador puede sustituirla por otra ruta nueva y comprobar que no comparte ni referencia datos del proyecto; esa ruta debe registrarse antes del encargo. No basta con abrir otro chat en HPA.
+Raíz elegida, en notación documental: `/Tests/HPA-EVAL-05`. `Tests` es una carpeta hermana de `HPA-Herramienta_Personal_de_Administracion`, bajo la misma carpeta contenedora; no está dentro del repositorio HPA. Esta notación no es una ruta absoluta literal del sistema operativo. La ruta absoluta efectiva se resuelve localmente y se registra en la ficha operativa y el manifiesto del evaluador, fuera de estos documentos compartidos. No basta con abrir otro chat en HPA.
 
 ```text
-C:\HPA-EVAL-05\
+/Tests/HPA-EVAL-05/
   agente\
     AGENTS.md                 instrucciones locales y contrato del rol
     docs\                    copias rectoras mínimas con enlaces conservados
@@ -90,13 +90,17 @@ Esta tabla define qué habrá que aportar para configurar el laboratorio y compl
 
 | Puerta | Datos que debe aportar la persona responsable | Referencia documental disponible |
 | --- | --- | --- |
-| G2 | Nombre del responsable; raíz absoluta elegida; propietario del laboratorio; ausencia de enlaces o referencias a HPA, datos reales y otros proyectos. | `C:\HPA-EVAL-05\` es una propuesta de ruta, no una elección confirmada ni una raíz creada. |
+| G2 | Nombre del responsable; raíz absoluta efectiva registrada localmente; propietario del laboratorio; ausencia de enlaces o referencias a HPA, datos reales y otros proyectos. | La ubicación documental elegida es `/Tests/HPA-EVAL-05`; no acredita por sí sola creación ni aislamiento. |
 | G3 | Cliente y versión; perfil efectivo Developer; rutas de lectura/escritura/denegación; recursos mínimos y temporales; canales disponibles; red; aprobaciones y mecanismo de sonda humana equivalente. | La matriz de esta ficha define el perfil propuesto. Compatibilidad, retirada de canales y aplicación efectiva requieren evidencia del laboratorio. |
 | G4 | Manifiesto de copias rectoras con origen, revisión y hash; versión de la muestra y del repositorio sintético; identidad del evaluador; custodia de clave y exclusión técnica de su ámbito. | El diseño define las fuentes y la separación. El agente recibe solo fuentes copiadas y aceptación visible; nunca clave ni criterios privados. |
 | G5 | Fuente de trazas; operaciones y canales cubiertos; identificadores de registros; ubicación y persona que custodia evidencias; limitaciones y conservación antes de restaurar el laboratorio. | Las tablas del diseño enumeran las evidencias necesarias. La cobertura real no se infiere de hashes, respuestas del agente o ausencia de cambios finales. |
 | G6 | Responsable del encargo; rol DEV-02; modelo/esfuerzo seleccionado; caso o casos expresamente asignados; archivos editables; temporal; herramientas y comprobaciones permitidas; aceptación visible y versión exacta de la petición. | El documento de encargo fija el rol Developer y los campos por completar. No selecciona un modelo ni autoriza ejecutar casos. |
 
 La persona responsable deberá identificar por separado los perfiles Reviewer y Tester si se preparan después. No se presupone que tengan los permisos o capacidades del Developer. Los valores que falten se registran como no disponibles; un requisito técnico no verificable conserva su límite y no se marca como control aprobado.
+
+## Guía de preparación manual
+
+La [guía de raíz y perfiles](preparacion-raiz-perfiles-eval-05.md) concreta los primeros pasos y enlaza una plantilla portable de perfiles. Se prepara primero Developer; la configuración efectiva y la retirada de canales se comprueban en el laboratorio antes de ejecutar casos. La plantilla no se instala en HPA ni modifica configuración global.
 
 ## Orden práctico de preparación
 

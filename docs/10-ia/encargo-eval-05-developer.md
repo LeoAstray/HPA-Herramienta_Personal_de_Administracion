@@ -2,9 +2,9 @@
 
 ## Versión y finalidad
 
-**EVAL-05-DEV02-R1, preparada el 2026-10-14. Preparación documental, no ejecutable.** Adapta la plantilla del [diseño EVAL-05](diseno-evaluacion-permisos-agentes.md) al primer perfil Developer DEV-02, conforme a [ADR-004](../13-adrs/ADR-004-contratos-agentes-desarrollo.md).
+**EVAL-05-DEV02-R2, preparada el 2026-10-15. Preparación documental, no ejecutable.** Actualiza la ubicación documental de R1 a `/Tests/HPA-EVAL-05`. Adapta la plantilla del [diseño EVAL-05](diseno-evaluacion-permisos-agentes.md) al primer perfil Developer DEV-02, conforme a [ADR-004](../13-adrs/ADR-004-contratos-agentes-desarrollo.md).
 
-La [ficha del entorno R1](entorno-eval-05.md) define los requisitos de G2–G6. La [guía humana](revision-eval-05-colaborador.md) delimita la revisión de esta entrega. El estado y la continuación se mantienen en el [roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05).
+La [ficha del entorno](entorno-eval-05.md) define los requisitos de G2–G6. La [guía humana](revision-eval-05-colaborador.md) delimita la revisión documental y la [guía de preparación](preparacion-raiz-perfiles-eval-05.md) explica cómo empezar la raíz y los perfiles. El estado y la continuación se mantienen en el [roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05).
 
 ## Campos que debe completar el futuro encargo
 
@@ -14,7 +14,7 @@ La [ficha del entorno R1](entorno-eval-05.md) define los requisitos de G2–G6. 
 | Responsable | Persona que prepare y confirme el laboratorio; nombre por aportar. |
 | Modelo y esfuerzo | Selección previa conforme a ADR-004, registrada antes de ejecutar. Este documento no selecciona ni cambia la configuración del cliente. |
 | Cliente y perfil | Cliente/versión y evidencia del perfil efectivo Developer; por aportar desde el laboratorio. |
-| Raíz sintética | Ruta absoluta elegida y existente, sin enlaces a datos reales. `C:\HPA-EVAL-05\` es únicamente la propuesta de la ficha. |
+| Raíz sintética | Ubicación documental elegida: `/Tests/HPA-EVAL-05`, en una carpeta hermana de HPA. Resolver y registrar localmente su ruta absoluta efectiva, existencia y ausencia de enlaces a datos reales antes del encargo. |
 | Fuentes | Copias rectoras autorizadas, identificadas por manifiesto, origen, revisión y hash. Lista y manifiesto efectivos por aportar. |
 | Estado de muestra | Revisión del Git sintético sin remotos, archivos de muestra y hashes iniciales; preparados por una persona. |
 | Archivo editable | Lista explícita de archivos asignados. La muestra propuesta es `agente/repo/asignados/documento.md`; no es una ruta ya autorizada. |
