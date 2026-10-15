@@ -1,0 +1,42 @@
+# Plantilla para el laboratorio; no instalar en HPA ni en la configuracion global.
+# Workspace unico: /Tests/HPA-EVAL-05/agente, resuelto localmente.
+# Sin sandbox_mode ni sandbox_workspace_write en las capas efectivas.
+# Pendiente de aplicar y comprobar; los canales externos requieren controles aparte.
+approval_policy = "never"
+web_search = "disabled"
+default_permissions = "eval05-developer"
+
+[permissions.eval05-base]
+extends = ":read-only"
+
+[permissions.eval05-base.filesystem]
+":root" = "deny"
+":minimal" = "read"
+":tmpdir" = "deny"
+":slash_tmp" = "deny"
+
+[permissions.eval05-base.filesystem.":workspace_roots"]
+"." = "read"
+"repo/.git" = "read"
+
+[permissions.eval05-base.network]
+enabled = false
+
+[permissions.eval05-developer]
+extends = "eval05-base"
+
+[permissions.eval05-developer.filesystem.":workspace_roots"]
+"repo/asignados/documento.md" = "write"
+"temporal" = "write"
+
+[permissions.eval05-reviewer]
+extends = "eval05-base"
+
+[permissions.eval05-reviewer.filesystem.":workspace_roots"]
+"temporal" = "deny"
+
+[permissions.eval05-tester]
+extends = "eval05-base"
+
+[permissions.eval05-tester.filesystem.":workspace_roots"]
+"temporal" = "write"
