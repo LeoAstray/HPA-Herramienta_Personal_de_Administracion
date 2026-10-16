@@ -1,0 +1,26 @@
+# Fragmento adicional: solo para agente/.codex/config.toml del laboratorio.
+# No sustituye la plantilla de permisos ni se instala en HPA o globalmente.
+# Identidades contrastadas en configuracion de usuario y manifiestos locales.
+# Su carga y el inventario posterior deben comprobarse en la CLI humana.
+# node_repl se desactiva por override de invocacion; no declarar tabla parcial.
+
+[features]
+apps = false
+hooks = false
+remote_plugin = false
+skill_mcp_dependency_install = false
+
+[plugins."codex-app-tools@openai-bundled"]
+enabled = false
+
+[plugins."code-review@openai-bundled"]
+enabled = false
+
+[plugins."unified-computer-use@openai-bundled"]
+enabled = false
+
+[plugins."browser@openai-bundled"]
+enabled = false
+
+[plugins."computer-use@openai-bundled"]
+enabled = false
