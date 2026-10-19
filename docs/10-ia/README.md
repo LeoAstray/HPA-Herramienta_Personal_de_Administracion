@@ -16,4 +16,6 @@ El [diseño EVAL-05](diseno-evaluacion-permisos-agentes.md), preparado el 2026-1
 
 La [preparación del encargo Developer](encargo-eval-05-developer.md) identifica el primer perfil, los campos que requiere el laboratorio y una plantilla futura. La [guía de raíz y perfiles](preparacion-raiz-perfiles-eval-05.md) explica cómo preparar manualmente `/Tests/HPA-EVAL-05` y contiene una plantilla portable de permisos. La revisión, las versiones y la evidencia de aplicación se consultan en el roadmap; estos documentos no acreditan controles efectivos ni autorizan ejecución por sí solos.
 
+La [guía de sesiones de Codex](guia-sesiones-codex.md) explica el uso manual de la aplicación y la CLI: carpeta, arranque, inspección, encargo, continuación y salida. Para el laboratorio remite al procedimiento específico; no sustituye la evaluación de permisos ni los contratos por rol.
+
 El avance, los pendientes y el siguiente paso se mantienen en el [seguimiento de EVAL-05 en el roadmap](../01-proyecto/roadmap.md#seguimiento-de-eval-05), que debe actualizarse en cada cambio.
